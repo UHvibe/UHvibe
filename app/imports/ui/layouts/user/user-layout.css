@@ -1,0 +1,25 @@
+.user-layout-body {
+  background-color: #ffffff;
+}
+
+.item a {
+  color: white;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 10px 0px 10px 0px;
+}
+
+.item a:hover {
+  color: white;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 10px 0px 10px 0px;
+  opacity: 0.4;
+}
+
+.ui.borderless.inverted.menu {
+  background-color: transparent;
+  box-shadow: none;
+  border-style: none;
+}
+

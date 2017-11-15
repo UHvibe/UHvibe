@@ -1,0 +1,9 @@
+<template name="Cas_Login">
+  <div class="ui red button">
+      {{#if currentUser}}
+      <div class="cas-logout">LOGOUT</div>
+      {{else}}
+      <div class="cas-login">LOGIN</div>
+      {{/if}}
+    </div>
+</template>
