@@ -5,79 +5,91 @@
       "name": "InterestCollection",
       "contents": [
         {
-          "name": "Software Engineering",
+          "name": "Alternative",
           "description": "Techniques for development of high quality systems"
         },
         {
-          "name": "Algorithms",
+          "name": "Blues",
           "description": "A set of rules to be followed in computation"
         },
         {
-          "name": "Mobile Networks",
+          "name": "Classical",
           "description": "Networks created using mobile devices."
         },
         {
-          "name": "Sailing",
+          "name": "Country",
           "description": ""
         },
         {
-          "name": "Mars",
+          "name": "Dance",
           "description": ""
         },
         {
-          "name": "Imu Cooking",
+          "name": "Easy Listening",
           "description": "Hawaiian practice of cooking in a pit."
         },
         {
-          "name": "Scuba",
+          "name": "Electronic",
           "description": ""
         },
         {
-          "name": "Photography",
+          "name": "European  (Folk / Pop)",
           "description": ""
         },
         {
-          "name": "Wind surfing",
+          "name": "Hip Hop / Rap",
           "description": ""
         },
         {
-          "name": "Psychology",
+          "name": "Indie Pop",
           "description": ""
         },
         {
-          "name": "Motorcycling",
+          "name": "Inspirational (Gospel)",
           "description": ""
         },
         {
-          "name": "Accreditation",
+          "name": "Asian Pop (J-pop, K-pop)",
           "description": ""
         },
         {
-          "name": "Paddling",
+          "name": "Jazz",
           "description": ""
         },
         {
-          "name": "Crossfit",
+          "name": "Latin",
           "description": ""
         },
         {
-          "name": "Cybersecurity",
+          "name": "New Age",
           "description": ""
         },
         {
-          "name": "Surfing",
+          "name": "Opera",
           "description": ""
         },
         {
-          "name": "Computer Vision",
+          "name": "Pop (Popular music)",
           "description": ""
         },
         {
-          "name": "Martial Arts",
+          "name": "R&B / Soul",
           "description": ""
         },
         {
-          "name": "Evolutionary Computation",
+          "name": "Reggae",
+          "description": ""
+        },
+        {
+          "name": "Rock",
+          "description": ""
+        },
+        {
+          "name": "Singer / Songwriter (Folk)",
+          "description": ""
+        },
+        {
+          "name": "World Music / Beats",
           "description": ""
         }
       ]
