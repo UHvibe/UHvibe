@@ -6,7 +6,7 @@
       "contents": [
         {
           "name": "Alternative",
-          "description": "Techniques for development of high quality systems"
+          "description": "Indie Rock, Alt Folk, Gothic, Brit-Pop, Alt Country, Adult Alternative, Shoegazer, Heavy Metal, Grunge, Post-Punk, New Wave, Post-Rock, and more"
         },
         {
           "name": "Blues",
@@ -103,7 +103,7 @@
           "username": "altenber",
           "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
           "interests": [
-            "Evolutionary Computation"
+            "Alternative"
           ],
           "title": "Associate Professor, Information and Computer Sciences",
           "picture": "/images/altenberg.jpg"
@@ -114,7 +114,7 @@
           "username": "baek",
           "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
           "interests": [
-            "Computer Vision"
+            "Blues"
           ],
           "title": "Associate Professor, Information and Computer Sciences",
           "picture": "/images/baek.jpg"
@@ -125,8 +125,8 @@
           "username": "esb",
           "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
           "interests": [
-            "Mobile Networks",
-            "Sailing"
+            "Electronic",
+            "European"
           ],
           "title": "Associate Professor, Information and Computer Sciences",
           "picture": "/images/biagioni.jpg"
@@ -137,8 +137,8 @@
           "username": "binsted",
           "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
           "interests": [
-            "Mars",
-            "Imu Cooking"
+            "Opera",
+            "New Age"
           ],
           "title": "Associate Professor, Information and Computer Sciences",
           "picture": "/images/binsted.jpg"
@@ -150,8 +150,8 @@
           "github": "henricasanova",
           "bio": "I am a Professor of Information and Computer Sciences at the University of Hawaii.",
           "interests": [
-            "Surfing",
-            "Photography"
+            "Jazz",
+            "Latin"
           ],
           "title": "Professor, Information and Computer Sciences",
           "picture": "/images/casanova.jpg"

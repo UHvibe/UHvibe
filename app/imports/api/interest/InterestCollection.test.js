@@ -8,8 +8,8 @@ import { removeAllEntities } from '/imports/api/base/BaseUtilities';
 
 if (Meteor.isServer) {
   describe('InterestCollection', function testSuite() {
-    const name = 'Software Engineering';
-    const description = 'Tools and techniques for team-based development of high quality software systems';
+    const name = 'Alternative';
+    const description = 'Indie Rock, Alt Folk, Gothic, Brit-Pop, Alt Country, Adult Alternative, Shoegazer, Heavy Metal, Grunge, Post-Punk, New Wave, Post-Rock, and more';
     const defineObject = { name, description };
 
     before(function setup() {

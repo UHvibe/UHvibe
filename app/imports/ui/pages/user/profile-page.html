@@ -19,23 +19,23 @@
                 </div>
 
                 <div class="field">
-                    {{> Select_Form_Control label="Genre Interests" options=interests errorMessage=(fieldError "genre interests") multiple=true }}
-                    {{> Text_Form_Control label="Music Skills" placeholder="Singing" value=profile.firstName errorMessage=(fieldError "skills")}}
+                    {{> Select_Form_Control label="Genre Interests" options=interests errorMessage=(fieldError "interests") multiple=true }}
+                    {{> Select_Form_Control label="Music Skills" placeholder="Singing" value=profile.firstName errorMessage=(fieldError "skills")}}
 
                 </div>
 
                 <div class="fields">
 
-                    {{> Social_Network_Form_Control label="Github" icon="github" placeholder="pmjohnson" value=profile.github errorMessage=(fieldError "github")}}
-                    {{> Social_Network_Form_Control label="Facebook" icon="facebook" placeholder="pmjohnson" value=profile.facebook errorMessage=(fieldError "facebook")}}
-                    {{> Social_Network_Form_Control label="Instagram" icon="instagram" placeholder="pmjohnson" value=profile.instagram errorMessage=(fieldError "instagram")}}
+                    {{> Social_Network_Form_Control label="YouTube" icon="youtube" placeholder="username" value=profile.github errorMessage=(fieldError "youtube")}}
+                    {{> Social_Network_Form_Control label="SoundCloud" icon="soundcloud" placeholder="username" value=profile.facebook errorMessage=(fieldError "soundcloud")}}
+                    {{> Social_Network_Form_Control label="Other" placeholder="username" value=profile.instagram errorMessage=(fieldError "other")}}
 
                 </div>
 
                 {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short bio statement here" errorMessage=(fieldError "bio")}}
 
 
-                <button class="ui primary button" type="submit">Submit</button>
+                <button class="ui red button" type="submit">Submit</button>
                 {{#if displaySuccessMessage}}
                     <div class="ui success message">
                         <p>Profile data successfully updated.</p>
