@@ -14,7 +14,7 @@
   },
   "galaxy.meteor.com": {
     "env": {
-      "MONGO_URL": "mongodb://user:123@@ds111336.mlab.com:11336/uhvibe
+      "MONGO_URL": "mongodb://user:123@ds111336.mlab.com:11336/uhvibe"
     }
   }
 }
