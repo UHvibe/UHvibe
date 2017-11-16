@@ -1,5 +1,8 @@
 .user-layout-body {
-  background-color: #ffffff;
+  background-color: #000000;
+  background-image: url("https://image.ibb.co/dyecoR/PROFILE_BACKGROUND.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .item a {

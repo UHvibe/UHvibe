@@ -34,6 +34,7 @@
 
                 {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short bio statement here" errorMessage=(fieldError "bio")}}
 
+<<<<<<< HEAD
 
                 <button class="ui red button" type="submit">Submit</button>
                 {{#if displaySuccessMessage}}
@@ -43,6 +44,16 @@
                 {{/if}}
             </form>
         </div>
+=======
+      <button class="ui primary button" type="submit">Submit</button>
+      {{#if displaySuccessMessage}}
+      <div class="ui success message">
+        <p>Profile data successfully updated.</p>
+      </div>
+      {{/if}}
+    </form>
+  </div>
+>>>>>>> master
 
     {{/if}}
 
