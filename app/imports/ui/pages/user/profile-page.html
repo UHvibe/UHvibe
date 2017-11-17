@@ -17,6 +17,7 @@
       </div>
 
       <div class="field">
+<<<<<<< HEAD
         {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" value=profile.picture
         errorMessage=(fieldError "picture")}}
       </div>
@@ -43,6 +44,11 @@
       {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short bio statement here"
       errorMessage=(fieldError "bio")}}
 
+=======
+        {{> Select_Form_Control label="Interests" options=interests errorMessage=(fieldError "interests") multiple=true }}
+      </div>
+
+>>>>>>> 801feb45bd88eb57c668c33ce4f56ee4e6ebfaa2
 
       <button class="ui red button" type="submit">Submit</button>
       {{#if displaySuccessMessage}}

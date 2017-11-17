@@ -5,6 +5,7 @@
       "name": "InterestCollection",
       "contents": [
         {
+<<<<<<< HEAD
           "name": "Alternative",
           "description": "Indie Rock, Alt Folk, Gothic, Brit-Pop, Alt Country, Adult Alternative, Shoegazer, Heavy Metal, Grunge, Post-Punk, New Wave, Post-Rock, and more"
         },
@@ -90,6 +91,17 @@
         },
         {
           "name": "World Music / Beats",
+=======
+          "name": "Rock",
+          "description": ""
+        },
+        {
+          "name": "Pop",
+          "description": ""
+        },
+        {
+          "name": "Classical",
+>>>>>>> 801feb45bd88eb57c668c33ce4f56ee4e6ebfaa2
           "description": ""
         }
       ]
@@ -101,60 +113,80 @@
           "firstName": "Lee",
           "lastName": "Altenberg",
           "username": "altenber",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
           "interests": [
+<<<<<<< HEAD
             "Alternative"
           ],
           "title": "Associate Professor, Information and Computer Sciences",
           "picture": "/images/altenberg.jpg"
+=======
+            "Classical"
+          ]
+>>>>>>> 801feb45bd88eb57c668c33ce4f56ee4e6ebfaa2
         },
         {
           "firstName": "Kyungim",
           "lastName": "Baek",
           "username": "baek",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
           "interests": [
+<<<<<<< HEAD
             "Blues"
           ],
           "title": "Associate Professor, Information and Computer Sciences",
           "picture": "/images/baek.jpg"
+=======
+            "Pop"
+          ]
+>>>>>>> 801feb45bd88eb57c668c33ce4f56ee4e6ebfaa2
         },
         {
           "firstName": "Edo",
           "lastName": "Biagioni",
           "username": "esb",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
           "interests": [
+<<<<<<< HEAD
             "Electronic",
             "European"
           ],
           "title": "Associate Professor, Information and Computer Sciences",
           "picture": "/images/biagioni.jpg"
+=======
+            "Mobile Networks",
+            "Sailing"
+          ]
+>>>>>>> 801feb45bd88eb57c668c33ce4f56ee4e6ebfaa2
         },
         {
           "firstName": "Kim",
           "lastName": "Binsted",
           "username": "binsted",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
           "interests": [
+<<<<<<< HEAD
             "Opera",
             "New Age"
           ],
           "title": "Associate Professor, Information and Computer Sciences",
           "picture": "/images/binsted.jpg"
+=======
+            "Rock"
+          ]
+>>>>>>> 801feb45bd88eb57c668c33ce4f56ee4e6ebfaa2
         },
         {
           "firstName": "Henri",
           "lastName": "Casanova",
           "username": "henric",
-          "github": "henricasanova",
-          "bio": "I am a Professor of Information and Computer Sciences at the University of Hawaii.",
           "interests": [
+<<<<<<< HEAD
             "Jazz",
             "Latin"
           ],
           "title": "Professor, Information and Computer Sciences",
           "picture": "/images/casanova.jpg"
+=======
+            "Rock"
+          ]
+>>>>>>> 801feb45bd88eb57c668c33ce4f56ee4e6ebfaa2
         }
       ]
     }
