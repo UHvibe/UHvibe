@@ -22,7 +22,7 @@
       </div>
 
       <div class="field">
-        {{> Select_Form_Control label="Genre Interests" options=interests errorMessage=(fieldError "genre interests")
+        {{> Interests_Form_Field label="Genre Interests" options=interests errorMessage=(fieldError "interests")
         multiple=true }}
         {{> Text_Form_Control label="Music Skills" placeholder="Singing" value=profile.firstName
         errorMessage=(fieldError "skills")}}
