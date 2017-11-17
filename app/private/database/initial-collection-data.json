@@ -104,7 +104,7 @@
           "bio": "I have been playing violin as a hobby for 5 years. I hope to join a group that has interests in classical music.",
           "interests": [
             "Classical",
-            "Pop"
+            "Pop (Popular music)"
           ],
           "skills": "Violin",
           "picture": "/images/altenberg.jpg"
@@ -117,7 +117,7 @@
           "interests": [
             "Jazz",
             "Classical",
-            "Pop"
+            "Pop (Popular music)"
           ],
           "skills": "Piano, guitar",
           "picture": "/images/baek.jpg"
@@ -141,7 +141,7 @@
           "username": "binsted",
           "bio": "I like pop and rock music, and I am looking for a band I could join in.",
           "interests": [
-            "Pop",
+            "Pop (Popular music)",
             "Rock",
             "New Age"
           ],
@@ -157,7 +157,7 @@
           "interests": [
             "Jazz",
             "Latin",
-            "Pop",
+            "Pop (Popular music)",
             "Rock"
           ],
           "skills": "Drums, Guitar, trumpet",
