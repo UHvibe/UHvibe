@@ -100,47 +100,52 @@
         {
           "firstName": "Lee",
           "lastName": "Altenberg",
-          "username": "altenber",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
+          "username": "altenberg",
+          "bio": "I have been playing violin as a hobby for 5 years. I hope to join a group that has interests in classical music.",
           "interests": [
-            "Alternative"
+            "Classical",
+            "Pop"
           ],
-          "title": "Associate Professor, Information and Computer Sciences",
+          "skills": "Violin",
           "picture": "/images/altenberg.jpg"
         },
         {
           "firstName": "Kyungim",
           "lastName": "Baek",
           "username": "baek",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
+          "bio": "I have been playing piano since I was 5 years old. I hope to join a group that has interestes in Jazz, Classical, or Pop music",
           "interests": [
-            "Blues"
+            "Jazz",
+            "Classical",
+            "Pop"
           ],
-          "title": "Associate Professor, Information and Computer Sciences",
+          "skills": "Piano, guitar",
           "picture": "/images/baek.jpg"
         },
         {
           "firstName": "Edo",
           "lastName": "Biagioni",
           "username": "esb",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
+          "bio": "I like playing guitar and base as a hobby, I learned how to play saxephone in highschool.",
           "interests": [
             "Electronic",
-            "European"
+            "Jazz",
+            "Rock"
           ],
-          "title": "Associate Professor, Information and Computer Sciences",
+          "skills": "Guitar, Saxephone, Base",
           "picture": "/images/biagioni.jpg"
         },
         {
           "firstName": "Kim",
           "lastName": "Binsted",
           "username": "binsted",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
+          "bio": "I like pop and rock music, and I am looking for a band I could join in.",
           "interests": [
-            "Opera",
+            "Pop",
+            "Rock",
             "New Age"
           ],
-          "title": "Associate Professor, Information and Computer Sciences",
+          "skills": "Guitar, Singing, Base",
           "picture": "/images/binsted.jpg"
         },
         {
@@ -148,12 +153,14 @@
           "lastName": "Casanova",
           "username": "henric",
           "github": "henricasanova",
-          "bio": "I am a Professor of Information and Computer Sciences at the University of Hawaii.",
+          "bio": "I like jazz, Latin, pop and rock music. I hope to join a group with similar interests.",
           "interests": [
             "Jazz",
-            "Latin"
+            "Latin",
+            "Pop",
+            "Rock"
           ],
-          "title": "Professor, Information and Computer Sciences",
+          "skills": "Drums, Guitar, trumpet",
           "picture": "/images/casanova.jpg"
         }
       ]

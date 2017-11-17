@@ -9,19 +9,19 @@ import { removeAllEntities } from '/imports/api/base/BaseUtilities';
 
 if (Meteor.isServer) {
   describe('ProfileCollection', function testSuite() {
-    const interestName = 'Software Engineering';
-    const interestDescription = 'Tools for software development';
+    const interestName = 'Pop';
+    const interestDescription = 'I am interested in Pop music';
     const firstName = 'Philip';
     const lastName = 'Johnson';
     const username = 'johnson';
-    const bio = 'I have been a professor of computer science at UH since 1990.';
+    const bio = 'I have been playing guitar for 5 years.';
     const interests = [interestName];
     const picture = 'http://philipmjohnson.org/headshot.jpg';
-    const title = 'Professor Computer Science';
-    const github = 'http://github.com/philipjohnson';
-    const facebook = 'http://github.com/philipjohnson';
-    const instagram = 'http://github.com/philipjohnson';
-    const defineObject = { firstName, lastName, username, bio, interests, picture, title, github, facebook, instagram };
+    const skills = 'Guitar';
+    const youtube = 'http://github.com/philipjohnson';
+    const soundCloud = 'http://github.com/philipjohnson';
+    const other = '';
+    const defineObject = { firstName, lastName, username, bio, interests, picture, skills, youtube, soundCloud, other};
 
     before(function setup() {
       removeAllEntities();
@@ -44,10 +44,10 @@ if (Meteor.isServer) {
       expect(doc.bio).to.equal(bio);
       expect(doc.interests[0]).to.equal(interestName);
       expect(doc.picture).to.equal(picture);
-      expect(doc.title).to.equal(title);
-      expect(doc.github).to.equal(github);
-      expect(doc.facebook).to.equal(facebook);
-      expect(doc.instagram).to.equal(instagram);
+      expect(doc.skills).to.equal(skills);
+      expect(doc.youtube).to.equal(youtube);
+      expect(doc.soundCloud).to.equal(soundCloud);
+      expect(doc.other).to.equal(other);
       // Check that multiple definitions with the same email address fail
       expect(function foo() { Profiles.define(defineObject); }).to.throw(Error);
       // Check that we can dump and restore a Profile.
@@ -61,15 +61,15 @@ if (Meteor.isServer) {
 
     it('#define (illegal interest)', function test() {
       const illegalInterests = ['foo'];
-      const defineObject2 = { firstName, lastName, username, bio, interests: illegalInterests, picture, title,
-        github, facebook, instagram };
+      const defineObject2 = { firstName, lastName, username, bio, interests: illegalInterests, picture, skills,
+        youtube, soundCloud, other };
       expect(function foo() { Profiles.define(defineObject2); }).to.throw(Error);
     });
 
     it('#define (duplicate interests)', function test() {
       const duplicateInterests = [interestName, interestName];
-      const defineObject3 = { firstName, lastName, username, bio, interests: duplicateInterests, picture, title,
-        github, facebook, instagram };
+      const defineObject3 = { firstName, lastName, username, bio, interests: duplicateInterests, picture, skills,
+        youtube, soundCloud, other};
       expect(function foo() { Profiles.define(defineObject3); }).to.throw(Error);
     });
   });
