@@ -4,24 +4,18 @@
 
       <form class="ui form filter-data-form">
         <div class="field">
-          {{> Select_Form_Control label="Genre" options=interests multiple=true }}
+          {{> Select_Form_Control label="Genre Interests" options=interests multiple=true }}
         </div>
         <button class="ui red button" type="submit">Filter</button>
       </form>
 
       <form class="ui equal width form filter-data-form">
-        <div class="field">
-          {{> Select_Form_Control label="Music" options=interests multiple=true }}
+        <div style="margin-top: 40px" class="field">
+          {{> Select_Form_Control label="Music Skills" options=interests multiple=true }}
         </div>
         <button class="ui red button" type="submit">Filter</button>
       </form>
 
-      <form class="ui equal width form filter-data-form">
-        <div class="field">
-          {{> Select_Form_Control label="Interests" options=interests multiple=true }}
-        </div>
-        <button class="ui red button" type="submit">Filter</button>
-      </form>
 
       {{> Filter_Page_Directory profiles=profiles }}
 
