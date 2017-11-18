@@ -1,12 +1,12 @@
 .landing-section-1 {
   padding-bottom: 300px;
-  height: 100%;
   background-position: center center;
   background-image: url("https://image.ibb.co/ipPbXm/NEW_BG_BW.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .logo {
