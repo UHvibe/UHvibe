@@ -41,7 +41,7 @@ class ProfileCollection extends BaseCollection {
    *                   lastName: 'Johnson',
    *                   username: 'johnson',
    *                   bio: 'I have been a professor of computer science at UH since 1990.',
-   *                   interests: ['Application Development', 'Software Engineering', 'Databases'],
+   *                   interests: ['Pop (Pop music)', 'Jazz', 'Rock'],
    *                   skills: 'Guitar, singing',
    *                   picture: 'http://philipmjohnson.org/headshot.jpg',
    *                   youtube: 'https://github.com/philipmjohnson',
