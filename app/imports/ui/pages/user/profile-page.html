@@ -1,64 +1,51 @@
 <template name="Profile_Page">
 
-  {{#if Template.subscriptionsReady}}
+    {{#if Template.subscriptionsReady}}
 
-  <div class="ui text container segment">
-    <div class="ui dividing header">
-      Profile
-    </div>
-    <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
+        <div class="ui text container segment">
+            <div class="ui dividing header">
+                Profile
+            </div>
+            <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
 
-      <div class="fields">
-        {{> Text_Form_Control label="First" placeholder="Philip" value=profile.firstName errorMessage=(fieldError
-        "firstName")}}
-        {{> Text_Form_Control label="Last" placeholder="Johnson" value=profile.lastName errorMessage=(fieldError
-        "lastName")}}
+                <div class="fields">
+                    {{> Text_Form_Control label="First" placeholder="Philip" value=profile.firstName errorMessage=(fieldError "firstName")}}
+                    {{> Text_Form_Control label="Last" placeholder="Johnson" value=profile.lastName errorMessage=(fieldError "lastName")}}
 
-      </div>
+                </div>
 
-      <div class="field">
-<<<<<<< HEAD
-        {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" value=profile.picture
-        errorMessage=(fieldError "picture")}}
-      </div>
+                <div class="field">
+                    {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" value=profile.picture errorMessage=(fieldError "picture")}}
+                </div>
 
-      <div class="field">
-        {{> Interests_Form_Field label="Genre Interests" options=interests errorMessage=(fieldError "interests")
-        multiple=true }}
-        {{> Text_Form_Control label="Music Skills" placeholder="Singing" value=profile.firstName
-        errorMessage=(fieldError "skills")}}
+                <div class="field">
+                    {{> Select_Form_Control label="Genre Interests" options=interests errorMessage=(fieldError "interests") multiple=true }}
+                    {{> Text_Form_Control label="Music Skills" placeholder="Singing" value=profile.skills errorMessage=(fieldError "skills")}}
 
-      </div>
+                </div>
 
-      <div class="fields">
+                <div class="fields">
 
-        {{> Social_Network_Form_Control label="Github" icon="github" placeholder="pmjohnson" value=profile.github
-        errorMessage=(fieldError "github")}}
-        {{> Social_Network_Form_Control label="Facebook" icon="facebook" placeholder="pmjohnson" value=profile.facebook
-        errorMessage=(fieldError "facebook")}}
-        {{> Social_Network_Form_Control label="Instagram" icon="instagram" placeholder="pmjohnson"
-        value=profile.instagram errorMessage=(fieldError "instagram")}}
+                    {{> Social_Network_Form_Control label="YouTube" icon="youtube" placeholder="username" value=profile.youtube errorMessage=(fieldError "youtube")}}
+                    {{> Social_Network_Form_Control label="SoundCloud" icon="soundcloud" placeholder="username" value=profile.soundCloud errorMessage=(fieldError "soundcloud")}}
+                    {{> Social_Network_Form_Control label="Other" placeholder="other SNS" value=profile.other errorMessage=(fieldError "other")}}
 
-      </div>
+                </div>
 
-      {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short bio statement here"
-      errorMessage=(fieldError "bio")}}
+                {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short bio statement here" errorMessage=(fieldError "bio")}}
 
-=======
-        {{> Select_Form_Control label="Interests" options=interests errorMessage=(fieldError "interests") multiple=true }}
-      </div>
 
->>>>>>> 801feb45bd88eb57c668c33ce4f56ee4e6ebfaa2
+                <button class="ui red button" type="submit">Submit</button>
+                {{#if displaySuccessMessage}}
+                    <div class="ui success message">
+                        <p>Profile data successfully updated.</p>
+                    </div>
+                {{/if}}
+            </form>
+        </div>
 
-      <button class="ui red button" type="submit">Submit</button>
-      {{#if displaySuccessMessage}}
-      <div class="ui success message">
-        <p>Profile data successfully updated.</p>
-      </div>
-      {{/if}}
-    </form>
-  </div>
 
-  {{/if}}
+
+    {{/if}}
 
 </template>
