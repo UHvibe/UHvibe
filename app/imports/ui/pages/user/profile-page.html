@@ -4,9 +4,9 @@
 
         <div class="ui text container segment">
             <div class="ui dividing header">
-                Profile
+                Create A Profile
             </div>
-            <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
+            <form id="form" class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
 
                 <div class="fields">
                     {{> Text_Form_Control label="First" placeholder="Philip" value=profile.firstName errorMessage=(fieldError "firstName")}}
@@ -36,14 +36,17 @@
 
 
                 <button class="ui red button" type="submit">Submit</button>
+                <a class="{{isActiveRoute " Filter_Page"}} item" href="{{pathFor "Filter_Page"
+                                                                                                                    username=routeUserName}}">Next Step: Search</a>
+
                 {{#if displaySuccessMessage}}
                     <div class="ui success message">
                         <p>Profile data successfully updated.</p>
                     </div>
                 {{/if}}
             </form>
-        </div>
 
+        </div>
 
 
     {{/if}}
