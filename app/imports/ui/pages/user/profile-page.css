@@ -9,3 +9,14 @@
 #form {
   color: white;
 }
+
+#foot {
+  background-color: white;
+  color: black;
+}
+
+.item, a:hover {
+  padding-top: 45px;
+  float: right;
+  color: #000000;
+}

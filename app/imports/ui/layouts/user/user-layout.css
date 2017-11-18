@@ -27,8 +27,6 @@
   border-style: none;
 }
 
-#foot {
-  background-color: #ffffff;
-  color: 000000;
+#footer {
+  background-color: transparent;
 }
-

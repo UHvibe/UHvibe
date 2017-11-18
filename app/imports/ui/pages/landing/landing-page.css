@@ -7,16 +7,6 @@
   width: auto;
 }
 
-.landing-section-2 {
-  position: static;
-  padding: 0px 30px 0px 30px;
-  background-color: #000000;
-  color: #FFFFFF;
-  font-size: 16px;
-  line-height: 20px;
-  border: solid #000000 50px;
-}
-
 .ui.borderless.menu {
   background-color: transparent;
   box-shadow: none;
@@ -42,8 +32,14 @@
   opacity: 0.4;
 }
 
-#footer {
+.landing-section-2 {
+  position: static;
+  padding: 0px 30px 0px 30px;
   background-color: #000000;
-  color: white;
-  height: 100%;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 20px;
 }
+
+
+
