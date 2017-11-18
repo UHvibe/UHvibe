@@ -1,17 +1,27 @@
 .landing-section-1 {
-  background-color: transparent;
-  color: #000000;
+  padding-bottom: 300px;
+  background-position: center center;
   background-image: url("https://image.ibb.co/ipPbXm/NEW_BG_BW.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 300px;
-  height: 100%;
-  background-color: #000000;
+  background-attachment: fixed;
+  width: auto;
+  height: auto;
 }
 
 .logo {
   height: auto;
   width: auto;
+}
+
+.landing-section-2 {
+  position: static;
+  padding: 0px 30px 0px 30px;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 20px;
+  border: solid #000000 50px;
 }
 
 .ui.borderless.menu {
@@ -39,14 +49,8 @@
   opacity: 0.4;
 }
 
-.landing-section-2 {
-  position: static;
-  padding: 0px 30px 0px 30px;
+#footer {
   background-color: #000000;
-  color: #FFFFFF;
-  font-size: 16px;
-  line-height: 20px;
+  color: white;
+  height: 100%;
 }
-
-
-
