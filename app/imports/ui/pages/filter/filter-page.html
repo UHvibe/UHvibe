@@ -1,30 +1,32 @@
 <template name="Filter_Page">
+
   {{#if Template.subscriptionsReady}}
+  <div class="section-1">
     <div style="margin-top: 10px" class="ui container">
 
-      <form class="ui form filter-data-form">
-        <div class="field">
-          {{> Select_Form_Control label="Genre" options=interests multiple=true }}
-        </div>
-        <button class="ui red button" type="submit">Filter</button>
-      </form>
 
-      <form class="ui equal width form filter-data-form">
-        <div class="field">
-          {{> Select_Form_Control label="Music" options=interests multiple=true }}
+      <div class="right floated center aligned six wide column">
+        <div class="grid">
+          <form class="ui form filter-data-form">
+            <div class="ui six wide field">
+              {{> Select_Form_Control label="" options=interests multiple=true }}
+            </div>
+            <button class="ui red button" type="submit" padding-top="10px">Filter</button>
+          </form>
+          <br>
+          <div class="grid">
+            <form class="ui form filter-data-form">
+              <div class="ui six wide field">
+                {{> Text_Form_Control label="" placeholder="skills" options=profile.skills multiple=true }}
+              </div>
+              <button class="ui red button" type="submit" padding-top="10px">Filter</button>
+            </form>
+          </div>
         </div>
-        <button class="ui red button" type="submit">Filter</button>
-      </form>
-
-      <form class="ui equal width form filter-data-form">
-        <div class="field">
-          {{> Select_Form_Control label="Interests" options=interests multiple=true }}
-        </div>
-        <button class="ui red button" type="submit">Filter</button>
-      </form>
+      </div>
 
       {{> Filter_Page_Directory profiles=profiles }}
-
     </div>
+  </div>
   {{/if}}
 </template>
