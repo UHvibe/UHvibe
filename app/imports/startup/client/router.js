@@ -86,6 +86,14 @@ userRoutes.route('/filter', {
   },
 });
 
+export const messagesPageRouteName = 'Message_Page';
+userRoutes.route('/messages', {
+  name: messagesPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: messagesPageRouteName });
+  },
+});
+
 /*                        MISC ROUTES                       */
 FlowRouter.notFound = {
   action() {
