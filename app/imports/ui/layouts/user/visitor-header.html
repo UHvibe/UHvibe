@@ -1,0 +1,17 @@
+<template name="Visitor_Header">
+  <header id="head">
+    <div class="header-section-1">
+      <div class="ui borderless inverted menu">
+        <div class="ui container">
+          <div class="item"><img class="ui small image" src="https://image.ibb.co/kDvj56/HEADER_LOGO.png"></div>
+          <div class="right menu">
+            <div class="item"><a class="{{isActiveRoute " Landing_Page"}} item" href="{{pathFor "Landing_Page"
+                                                                                                username=routeUserName}}">Home Page</a>
+            </div>
+            <div class="right aligned item">{{> Cas_Login }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</template>
