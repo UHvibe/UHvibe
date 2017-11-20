@@ -1,46 +1,25 @@
-.learnmore-section-one {
+.learnmore-section {
   color: #000000;
   text-align: center;
   margin: 100px auto;
-  border: 1px black solid;
-  padding: 5%;
+  padding: 2%;
 }
 
-.learnmore-section-two {
-  color: #000000;
-  text-align: center;
-  margin: 100px auto;
-  border: 1px black solid;
-  padding: 5%;
-}
-.learnmore-section-three {
-  color: #000000;
-  text-align: center;
-  margin: 100px auto;
-  border: 1px black solid;
-  padding: 5%;
+.description {
+  text-align: left;
 }
 
-.learnmore-section-four {
-  color: #000000;
-  text-align: center;
-  margin: 100px auto;
-  padding: 20%;
-  border: 1px black solid;
+a{
+  font-size: 21px;
+  font-weight: normal;
+  padding: 0px 25px;
+  color: #ffffff;
 }
 
-.learnmore-section-five{
-  color: #000000;
-  text-align: center;
-  margin: 100px auto;
-  border: 1px black solid;
-  padding: 20%;
-}
-
-.learnmore-section-six {
-  color: #000000;
-  text-align: center;
-  margin: 100px auto;
-  border: 1px black solid;
-  padding: 20%;
+a:hover {
+  font-size: 21px;
+  font-weight: normal;
+  padding: 0px 25px;
+  color: #ffffff;
+  opacity: 0.5;
 }
