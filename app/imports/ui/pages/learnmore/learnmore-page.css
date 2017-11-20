@@ -10,11 +10,26 @@
   color: #000000;
   text-align: center;
   margin: 100px auto;
+  border: 1px black solid;
+  padding: 5%;
+}
+.learnmore-section-three {
+  color: #000000;
+  text-align: center;
+  margin: 100px auto;
+  border: 1px black solid;
+  padding: 5%;
+}
+
+.learnmore-section-four {
+  color: #000000;
+  text-align: center;
+  margin: 100px auto;
   padding: 20%;
   border: 1px black solid;
 }
 
-.learnmore-section-three {
+.learnmore-section-five{
   color: #000000;
   text-align: center;
   margin: 100px auto;
@@ -22,7 +37,7 @@
   padding: 20%;
 }
 
-.learnmore-section-four {
+.learnmore-section-six {
   color: #000000;
   text-align: center;
   margin: 100px auto;
