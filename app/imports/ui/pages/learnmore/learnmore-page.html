@@ -3,62 +3,31 @@
     <!--Needs Better Design-->
     <!--Borders are there is indicate where the sections are-->
 
-    <div class="learnmore-section-one">
+    <div class="learnmore-section">
       <h1>What is UHvibe ?</h1>
-      <h3>UHvibe is a Meteor application that is designed to help the University of Hawaii community
-        find and connect with others based on their music interests and skills, or as we call it 'vibe'.</h3>
+      <div class="description">
+        <h3>UHvibe is a Meteor application that is designed to help the University of Hawaii community
+          find and connect with others based on their music interests and skills, or as we call it 'vibe'.</h3>
+      </div>
+
     </div>
 
-    <div class="learnmore-section-two">
+    <div class="learnmore-section">
       <h1>Why use UHvibe ?</h1>
-      <h3>University of Hawaii has 10 campuses and additional educational and research facilities across the State of Hawaii.
-        Thus, the community is very large and diverse. Unfortunately, there are very little ways to find and connect with
-        others based on their music 'vibe'. UHvibe offers a way to overcome these issues.</h3>
+      <div class="description">
+        <h3>University of Hawaii has 10 campuses and additional educational and research facilities across the State of Hawaii.
+          Thus, the community is very large and diverse. Unfortunately, there are very little ways to find and connect with
+          others based on their music 'vibe'. UHvibe offers a way to overcome these issues.</h3>
+      </div>
+
     </div>
 
     <!--Maybe make the Get Started a button, which routes the user to the 'Get Started Page'-->
-    <div class="learnmore-section-three">
+    <div class="learnmore-section">
       <h1>Interested ?</h1>
-      <h3>Let's Get Started !</h3>
-    </div>
-
-    <div class="learnmore-section-four">
-      <div class="ui grid">
-        <div class="ui eight wide middle aligned column">
-          <i class="huge red write square icon"></i>
-          <h1 class="landing-section-header">Create</h1>
-        </div>
-        <div class="ui eight wide column">
-          <h3>Fill out the profile form with your information and indicate your music interests and skills to allow
-            other users to find you.</h3>
-          <br>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="learnmore-section-five">
-      <div class="ui grid">
-        <div class="ui eight wide middle aligned column">
-          <i class="huge red search icon"></i>
-          <h1 class="landing-section-header">Search</h1>
-        </div>
-        <div class="ui eight wide column">
-          <h3>Use the filter option on the filter page to find profiles of people with specific music interests</h3>
-        </div>
-      </div>
-    </div>
-
-    <div class="learnmore-section-six">
-      <div class="ui grid">
-        <div class="ui eight wide middle aligned column">
-          <i class="huge red mail icon"></i>
-          <h1 class="landing-section-header">Connect</h1>
-        </div>
-        <div class="ui eight wide column">
-          <h3>Each profile has a <i class="mail icon"></i> icon on the filter page,
-            which allows you to message the user and interact with them.</h3>
-        </div>
+      <div class="ui red button">
+        <a class="{{isActiveRoute " GetStarted_Page"}} item" href="{{pathFor "GetStarted_Page"
+                                                                          username=routeUserName}}">Let's Get Started !</a>
       </div>
     </div>
     
