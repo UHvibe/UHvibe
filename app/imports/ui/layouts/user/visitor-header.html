@@ -1,16 +1,17 @@
 <template name="Visitor_Header">
   <header id="head">
-    <div class="header-section-1">
-      <div class="ui borderless inverted menu">
-        <div class="ui container">
-          <div class="item"><img class="ui small image" src="https://image.ibb.co/kDvj56/HEADER_LOGO.png"></div>
-          <div class="right menu">
-            <div class="item"><a class="{{isActiveRoute " Landing_Page"}} item" href="{{pathFor "Landing_Page"
-                                                                                                username=routeUserName}}">HOME PAGE</a>
-            </div>
-            <div class="right aligned item">{{> Cas_Login }}</div>
-          </div>
+    <div class="ui borderless inverted menu">
+      <a class="{{isActiveRoute " Landing_Page"}} item"
+        href="{{pathFor "Landing_Page" username=routeUserName}}"><img class="ui small image"
+                                                                      src="https://image.ibb.co/kDvj56/HEADER_LOGO.png"></a>
+      <div class="right menu">
+        <div id="learnmoreText" class="item"><a class="{{isActiveRoute " LearnMore_Page"}} item"
+          href="{{pathFor "LearnMore_Page" username=routeUserName}}">LEARN MORE</a>
         </div>
+        <div id="getStartedText" class="item"><a class="{{isActiveRoute " GetStarted_Page"}} item"
+          href="{{pathFor "GetStarted_Page" username=routeUserName}}">HOW TO GET STARTED</a>
+        </div>
+        <div class="right aligned item">{{> Cas_Login }}</div>
       </div>
     </div>
   </header>

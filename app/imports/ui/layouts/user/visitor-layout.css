@@ -5,6 +5,12 @@
   background-repeat: no-repeat;
 }
 
+#head .ui.borderless.inverted.menu {
+  background-color: transparent;
+  box-shadow: none;
+  border-style: none;
+}
+
 #header .item a {
   color: white;
   font-size: 12px;
@@ -19,12 +25,6 @@
   opacity: 0.4;
   box-shadow: none;
   background-color: transparent;
-}
-
-#head .ui.borderless.inverted.menu {
-  background-color: black;
-  box-shadow: none;
-  border-style: none;
 }
 
 #footer {

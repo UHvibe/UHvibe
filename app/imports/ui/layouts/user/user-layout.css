@@ -17,20 +17,10 @@
   font-size: 12px;
   font-weight: normal;
   opacity: 0.4;
-<<<<<<< HEAD
-=======
   box-shadow: none;
   background-color: transparent;
 }
 
-#head .ui.borderless.inverted.menu {
-  background-color: black;
->>>>>>> master
-  box-shadow: none;
-  background-color: transparent;
-}
-
-<<<<<<< HEAD
 #head .ui.borderless.inverted.menu {
   background-color: black;
   box-shadow: none;
@@ -40,8 +30,4 @@
 #footer {
   background-color: transparent;
 }
-=======
-#footer {
-  background-color: transparent;
-}
->>>>>>> master
+
