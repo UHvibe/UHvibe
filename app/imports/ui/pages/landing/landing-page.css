@@ -43,3 +43,35 @@
 
 
 
+/*added 11/18*/
+#learnmoreText a {
+  color: white;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 10px 0px 10px 0px;
+}
+
+#getStartedText a {
+  color: white;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 10px 0px 10px 0px;
+}
+
+#learnmoreText a:hover {
+  color: white;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 10px 0px 10px 0px;
+  opacity: 0.4;
+}
+
+#getStartedText a:hover {
+  color: white;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 10px 0px 10px 0px;
+  opacity: 0.4;
+}
+
+

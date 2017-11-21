@@ -5,3 +5,6 @@ import './user-header.html';
 import './user-header.js';
 import './user-layout.css';
 import './user-layout.html';
+import './visitor-layout.html';
+import './visitor-layout.css';
+import './visitor-header.html';

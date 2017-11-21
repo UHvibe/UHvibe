@@ -2,6 +2,7 @@
   <div class="body">
     {{#if Template.subscriptionsReady}}
 
+<<<<<<< HEAD
     <div class="ui text container segment">
       <div class="ui dividing header">
         Create A Profile
@@ -39,10 +40,53 @@
           errorMessage=(fieldError "other")}}
 
         </div>
+=======
+      <div class="ui text container segment">
+        <div class="ui dividing header">
+          Create A Profile
+        </div>
+        <form id="form" class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
+
+          <div class="fields">
+            {{> Text_Form_Control label="First" placeholder="Philip" value=profile.firstName errorMessage=(fieldError
+                "firstName")}}
+            {{> Text_Form_Control label="Last" placeholder="Johnson" value=profile.lastName errorMessage=(fieldError
+                "lastName")}}
+
+          </div>
+
+          <div class="field">
+            {{> Text_Form_Control label="Picture" placeholder="http://foo.com/shot.jpg" value=profile.picture
+                errorMessage=(fieldError "picture")}}
+          </div>
+
+          <div class="field">
+            {{> Select_Form_Control label="Genre Interests" options=interests errorMessage=(fieldError "interests")
+                multiple=true }}
+            {{> Text_Form_Control label="Music Skills" placeholder="Singing" value=profile.skills errorMessage=(fieldError
+                "skills")}}
+
+          </div>
+
+          <div class="fields">
+
+            {{> Social_Network_Form_Control label="YouTube" icon="youtube" placeholder="username" value=profile.youtube
+                errorMessage=(fieldError "youtube")}}
+            {{> Social_Network_Form_Control label="SoundCloud" icon="soundcloud" placeholder="username"
+                value=profile.soundCloud errorMessage=(fieldError "soundcloud")}}
+            {{> Social_Network_Form_Control label="Other" placeholder="other SNS" value=profile.other
+                errorMessage=(fieldError "other")}}
+
+          </div>
+
+          {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short bio statement here"
+              errorMessage=(fieldError "bio")}}
+>>>>>>> master
 
         {{> TextArea_Form_Control label="Bio" value=profile.bio placeholder="Short bio statement here"
         errorMessage=(fieldError "bio")}}
 
+<<<<<<< HEAD
 
         <button class="ui red button" type="submit">Submit</button>
        <a class="{{isActiveRoute " Filter_Page"}} item" href="{{pathFor "Filter_Page"
@@ -56,6 +100,20 @@
       </form>
 
     </div>
+=======
+          <button class="ui red button" type="submit">Submit</button>
+          <a class="{{isActiveRoute " Filter_Page"}} item" href="{{pathFor "Filter_Page"
+                                                                           username=routeUserName}}">Next Step: Search</a>
+
+          {{#if displaySuccessMessage}}
+            <div class="ui success message">
+              <p>Profile data successfully updated.</p>
+            </div>
+          {{/if}}
+        </form>
+
+      </div>
+>>>>>>> master
 
 
     {{/if}}

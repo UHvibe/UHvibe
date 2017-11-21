@@ -13,6 +13,24 @@ FlowRouter.route('/', {
   },
 });
 
+/*                       INFORMATION PAGES                    */
+
+export const learnMorePageRouteName = 'LearnMore_Page';
+FlowRouter.route('/learnmore', {
+  name: learnMorePageRouteName,
+  action() {
+    BlazeLayout.render('Visitor_Layout', { main: learnMorePageRouteName });
+  },
+});
+
+export const getStartedPageRouteName = 'GetStarted_Page';
+FlowRouter.route('/getstarted', {
+  name: getStartedPageRouteName,
+  action() {
+    BlazeLayout.render('Visitor_Layout', { main: getStartedPageRouteName });
+  },
+});
+
 /*                        DIRECTORY ROUTE                       */
 
 function addDirectoryBodyClass() {
@@ -65,6 +83,14 @@ userRoutes.route('/filter', {
   name: filterPageRouteName,
   action() {
     BlazeLayout.render('User_Layout', { main: filterPageRouteName });
+  },
+});
+
+export const messagesPageRouteName = 'Message_Page';
+userRoutes.route('/messages', {
+  name: messagesPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: messagesPageRouteName });
   },
 });
 

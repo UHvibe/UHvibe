@@ -15,8 +15,22 @@
   color: black;
 }
 
+<<<<<<< HEAD
 .item, a:hover {
   padding-top: 45px;
   float: right;
   color: #000000;
 }
+=======
+a {
+  color: #000000;
+}
+
+/*    Causing an error where if you hover over the genre choice, it just move rapidly left to right    */
+/*    Might need to change the properties                     */
+/*.item, a:hover {*/
+  /*padding-top: 45px;*/
+  /*float: right;*/
+  /*color: #000000;*/
+/*}*/
+>>>>>>> master
