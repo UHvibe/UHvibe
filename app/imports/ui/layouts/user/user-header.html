@@ -2,20 +2,18 @@
   <header id="head">
     <div class="header-section-1">
       <div class="ui borderless inverted menu">
-        <div class="ui container">
-          <div class="item"><img class="ui small image" src="https://image.ibb.co/kDvj56/HEADER_LOGO.png"></div>
-          <div class="right menu">
-            <div class="item"><a class="{{isActiveRoute " Profile_Page"}} item" href="{{pathFor "Profile_Page"
-              username=routeUserName}}">CREATE A PROFILE</a>
-            </div>
-            <div class="item"><a class="{{isActiveRoute " Filter_Page"}} item" href="{{pathFor "Filter_Page"
-              username=routeUserName}}">SEARCH BY FILTER</a>
-            </div>
-            <div class="item"><a class="{{isActiveRoute " Message_Page"}} item" href="{{pathFor "Message_Page"
-              username=routeUserName}}">MESSAGES</a>
-            </div>
-            <div class="right aligned item">{{> Cas_Login }}</div>
+        <div class="item"><img class="ui small image" src="https://image.ibb.co/kDvj56/HEADER_LOGO.png"></div>
+        <div class="right menu">
+          <div class="item"><a class="{{isActiveRoute " Profile_Page"}} item" href="{{pathFor "Profile_Page"
+            username=routeUserName}}">CREATE A PROFILE</a>
           </div>
+          <div class="item"><a class="{{isActiveRoute " Filter_Page"}} item" href="{{pathFor "Filter_Page"
+            username=routeUserName}}">SEARCH BY FILTER</a>
+          </div>
+          <div class="item"><a class="{{isActiveRoute " Message_Page"}} item" href="{{pathFor "Message_Page"
+            username=routeUserName}}">MESSAGES</a>
+          </div>
+          <div class="right aligned item">{{> Cas_Login }}</div>
         </div>
       </div>
     </div>
