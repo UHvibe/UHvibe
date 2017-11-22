@@ -1,8 +1,11 @@
-.visitor-layout-body {
-  background-color: #ffffff;
-  background-image: url("https://image.ibb.co/g9iRJR/PROFILE_BACKGROUND_2.png");
+body {
+}
+  background-color: #000000;
+  background-image: url("https://i.imgur.com/bfmxWx3.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
+  width: auto;
 }
 
 #head .ui.borderless.inverted.menu {

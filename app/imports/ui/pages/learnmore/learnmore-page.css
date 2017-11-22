@@ -1,25 +1,35 @@
-.learnmore-section {
+.learnmore-section-1 {
+  background-color: transparent;
+  max-width: 100%;
+}
+
+.ui.red.button {
+  border-radius: 25px;
+  margin-top: 30px;
+  padding: 10px 25px;
+  font-size: 15px;
+  font-weight: nore;
+  color: #ffffff;
+}
+
+.item, a:hover {
+  padding-top: 45px;
+  float: right;
   color: #000000;
-  text-align: center;
-  margin: 100px auto;
-  padding: 2%;
-}
-
-.description {
-  text-align: left;
-}
-
-a{
-  font-size: 21px;
   font-weight: normal;
-  padding: 0px 25px;
-  color: #ffffff;
 }
 
-a:hover {
-  font-size: 21px;
-  font-weight: normal;
-  padding: 0px 25px;
-  color: #ffffff;
-  opacity: 0.5;
+#foot {
+  background-color: whit}
+
+a {
+  color: #000000;
 }
+
+/*    Causing an error where if you hover over the genre choice, it just move rapidly left to right    */
+/*    Might need to change the properties                     */
+/*.item, a:hover {*/
+/*padding-top: 45px;*/
+/*float: right;*/
+/*color: #000000;*/
+/*}*/
