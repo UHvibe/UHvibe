@@ -1,22 +1,59 @@
-.learnmore-section-1 {
-  background-color: transparent;
-  max-width: 100%;
-}
-
-.ui.red.button {
-  border-radius: 25px;
-  margin-top: 30px;
-  padding: 10px 25px;
-  font-size: 15px;
-  font-weight: nore;
+.item a, a:active, a:hover {
   color: #ffffff;
 }
 
-.item, a:hover {
-  padding-top: 45px;
-  float: right;
-  color: #000000;
-  font-weight: normal;
+.ui.red.button a, a:active, a:hover {
+  border-radius: 25px;
+  padding: 10px 10px 10px 10px;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 900px;
+}
+
+.section-3 {
+  font-size: 50px;
+  font-weight: 900px;
+  color: black;
+}
+
+.learnmore-section-1 {
+  background-color: transparent;
+  max-width: 100%;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 20 !important;
+}
+
+.learnmore-section-2 {
+  background-color: black;
+  color: white;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 20 !important;
+}
+
+.learnmore-section-3 {
+  background-color: white;
+  color: #7e7e7e;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 20 !important;
+}
+
+.learnmore-section-4 {
+  background-color: black;
+  color: white;
+  padding-top: 180px;
+  padding-bottom: 180px;
+  text-align: center;
 }
 
 #foot {
@@ -24,9 +61,6 @@
   color: #ffffff;
 }
 
-a {
-  color: #000000;
-}
 
 /*    Causing an error where if you hover over the genre choice, it just move rapidly left to right    */
 /*    Might need to change the properties                     */
