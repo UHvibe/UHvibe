@@ -30,3 +30,8 @@
   box-shadow: none;
   border-style: none;
 }
+
+#foot {
+  background-color: transparent !important;
+  color: white
+}
