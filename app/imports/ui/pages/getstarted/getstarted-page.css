@@ -6,7 +6,15 @@
   margin: 2%;
 }
 
-.description {
-  margin-top: 40px;
-  text-align: left;
+
+.getstarted-section-2 {
+  color: #ffffff;
+}
+
+.left.aligned.four.wide.column {
+  padding-top: 30px;
+}
+
+.three.wide.center.aligned.column {
+  padding-top: 30px;
 }
