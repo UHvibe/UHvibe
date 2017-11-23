@@ -1,3 +1,7 @@
+.ui.small.image {
+  padding: 5px 5px 5px 5px;
+}
+
 .user-layout-body {
   background-color: #ffffff;
   background-image: url("https://image.ibb.co/g9iRJR/PROFILE_BACKGROUND_2.png");
@@ -5,14 +9,14 @@
   background-repeat: no-repeat;
 }
 
-#header .item a {
+#head .item a {
   color: white;
   font-size: 12px;
   font-weight: normal;
   box-shadow: none;
 }
 
-#header .item a:hover, a:active{
+#head .item a:hover, a:active{
   color: white;
   font-size: 12px;
   font-weight: normal;
@@ -25,8 +29,4 @@
   background-color: black;
   box-shadow: none;
   border-style: none;
-}
-
-#foot {
-  background-color: transparent !important;
 }

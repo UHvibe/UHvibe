@@ -8,10 +8,7 @@
 
 #form {
   color: white;
-}
-
-.item a, a:hover {
-  color: #ffffff;
+  padding-bottom: 20px;
 }
 
 #foot {
