@@ -6,7 +6,7 @@
                 <div class="ui dividing header">
                     Create A Profile
                 </div>
-                <form class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
+                <form id="form" class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
 
                     <div class="fields">
                         {{> Text_Form_Control label="First" placeholder="Philip" value=profile.firstName errorMessage=(fieldError
