@@ -9,7 +9,7 @@
                     <div class="grid">
                         <form class="ui form filter-data-form">
                             <div class="ui six wide field">
-                                {{> Select_Form_Control name="Interests" label="" options=interests multiple=true }}
+                                {{> Select_Form_Control label="Interests" options=interests multiple=true }}
                             </div>
                             <button class="ui red button" type="submit" padding-top="10px">Filter</button>
                         </form>
@@ -26,11 +26,6 @@
                 </div>
 
                 {{> Filter_Page_Directory profiles=profiles }}
-      <div class="right floated center aligned six wide column">
-        <div class="grid">
-          <form class="ui form filter-data-form">
-            <div class="ui six wide field">
-              {{> Select_Form_Control label="Interests" options=interests multiple=true }}
             </div>
         </div>
     {{/if}}
