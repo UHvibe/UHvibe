@@ -26,6 +26,11 @@
                 </div>
 
                 {{> Filter_Page_Directory profiles=profiles }}
+      <div class="right floated center aligned six wide column">
+        <div class="grid">
+          <form class="ui form filter-data-form">
+            <div class="ui six wide field">
+              {{> Select_Form_Control label="Interests" options=interests multiple=true }}
             </div>
         </div>
     {{/if}}
