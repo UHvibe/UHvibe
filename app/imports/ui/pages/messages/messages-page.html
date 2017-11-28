@@ -1,3 +1,30 @@
 <template name="Message_Page">
 
+    <div class="body">
+
+        {{#if Template.subscriptionsReady}}
+
+            <div class="ui text container">
+                <form id="form" class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
+
+                    <div class="fields">
+                        Send To:
+                        {{> Text_Form_Control label="First" placeholder="Philip" value=profile.firstName errorMessage=(fieldError
+                                "firstName")}}
+
+                    </div>
+
+                    <div class="fields">
+                        {{> TextArea_Form_Control rows="10" label="Body" value=profile.body placeholder="type message here"
+                                errorMessage=(fieldError "body")}}
+                    </div>
+
+                    <button style="margin-top: 50px" class="ui red button" type="submit">Submit</button>
+
+                </form>
+            </div>
+        {{/if}}
+
+    </div>
+
 </template>
