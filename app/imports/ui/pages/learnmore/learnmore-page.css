@@ -1,23 +1,6 @@
-.item a, a:active, a:hover {
-  color: #ffffff;
-}
-
-.ui.red.button a, a:active, a:hover {
-  border-radius: 25px;
-  padding: 10px 10px 10px 10px;
-  font-size: 15px;
-  color: #ffffff;
-}
-
 h1 {
   font-size: 50px;
   font-weight: 900px;
-}
-
-.section-3 {
-  font-size: 50px;
-  font-weight: 900px;
-  color: black;
 }
 
 .learnmore-section-1 {
@@ -48,12 +31,48 @@ h1 {
   font-weight: 20 !important;
 }
 
+.section-3 {
+  font-size: 50px;
+  font-weight: 900px;
+  color: black;
+}
+
+.getstarted-section {
+  color: #000000;
+  text-align: center;
+  margin: 100px auto;
+  padding: 2%;
+  margin: 2%;
+}
+
 .learnmore-section-4 {
+  color: #ffffff;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.learnmore-section-5 {
   background-color: black;
   color: white;
   padding-top: 180px;
-  padding-bottom: 180px;
+  padding-bottom: 0px;
   text-align: center;
+}
+
+.left.aligned.four.wide.column {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+.four.wide.center.aligned.column {
+  padding-top: 30px;
+  border-radius: 0px 25px 25px 0px;
+  background-color: white;
+  color: #7e7e7e;
+}
+
+.item a, a:active, a:hover {
+  color: #ffffff;
 }
 
 #foot {
