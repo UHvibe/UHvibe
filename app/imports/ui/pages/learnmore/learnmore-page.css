@@ -80,6 +80,14 @@ h1 {
   color: #ffffff;
 }
 
+.ui.red.button {
+  line-height: 11px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 
 /*    Causing an error where if you hover over the genre choice, it just move rapidly left to right    */
 /*    Might need to change the properties                     */
