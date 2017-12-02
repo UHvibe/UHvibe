@@ -1,30 +1,49 @@
 <template name="Message_Page">
-
-    <div class="body">
-
-        {{#if Template.subscriptionsReady}}
-
-            <div class="ui text container">
-                <form id="form" class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
-
-                    <div class="fields">
-                        Send To:
-                        {{> Text_Form_Control label="First" placeholder="Philip" value=profile.firstName errorMessage=(fieldError
-                                "firstName")}}
-
-                    </div>
-
-                    <div class="fields">
-                        {{> TextArea_Form_Control rows="10" label="Body" value=profile.body placeholder="type message here"
-                                errorMessage=(fieldError "body")}}
-                    </div>
-
-                    <button style="margin-top: 50px" class="ui red button" type="submit">Submit</button>
-
-                </form>
-            </div>
-        {{/if}}
-
+  {{#if Template.subscriptionsReady}}
+    <div class="ui container">
+      <div class="ui large buttons">
+        <button class="ui button">Received</button>
+        <button class="ui button">Sent</button>
+      </div>
+      <table class="ui striped table">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Subject</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>John Lilki</td>
+          <td>June 9, 2017</td>
+          <td>Whats Up!</td>
+          <td><button class="ui button">Read</button></td>
+          <td><button class="ui button">Delete</button></td>
+        </tr>
+        <tr>
+          <td>Jamie Harington</td>
+          <td>June 11, 2017</td>
+          <td>Hi</td>
+          <td><button class="ui middle button">Read</button></td>
+          <td><button class="ui button">Delete</button></td>
+        </tr>
+        <tr>
+          <td>Jill Lewis</td>
+          <td>June 11, 2017</td>
+          <td>Hello</td>
+          <td><button class="ui button">Read</button></td>
+          <td><button class="ui button">Delete</button></td>
+        </tr>
+        <tr>
+          <td>John Lilki</td>
+          <td>June 14, 2017</td>
+          <td>Hey</td>
+          <td><button class="ui button">Read</button></td>
+          <td><button class="ui button">Delete</button></td>
+        </tr>
+        </tbody>
+      </table>
     </div>
-
+  {{/if}}
 </template>

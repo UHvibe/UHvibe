@@ -1,0 +1,24 @@
+.ui.red.button {
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-size: 15px;
+  font-weight: normal;
+  color: white;
+}
+
+#form {
+  color: white;
+  padding-bottom: 20px;
+}
+
+#foot {
+  color: black !important;
+}
+
+/*    Causing an error where if you hover over the genre choice, it just move rapidly left to right    */
+/*    Might need to change the properties                     */
+/*.item, a:hover {*/
+/*padding-top: 45px;*/
+/*float: right;*/
+/*color: #000000;*/
+/*}*/

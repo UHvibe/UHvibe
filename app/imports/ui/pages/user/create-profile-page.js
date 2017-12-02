@@ -10,17 +10,17 @@ const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
 
 
-Template.Profile_Page.onCreated(function onCreated() {
+Template.Create_Profile_Page.onCreated(function onCreated() {
   this.subscribe(Interests.getPublicationName());
   this.subscribe(Profiles.getPublicationName());
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(displaySuccessMessage, false);
   this.messageFlags.set(displayErrorMessages, false);
-  this.context = Profiles.getSchema().namedContext('Profile_Page');
+  this.context = Profiles.getSchema().namedContext('Create_Profile_Page');
 });
 
 
-Template.Profile_Page.helpers({
+Template.Create_Profile_Page.helpers({
   successClass() {
     return Template.instance().messageFlags.get(displaySuccessMessage) ? 'success' : '';
   },
@@ -44,7 +44,7 @@ Template.Profile_Page.helpers({
 });
 
 
-Template.Profile_Page.events({
+Template.Create_Profile_Page.events({
     'submit .profile-data-form'(event, instance) {
         event.preventDefault();
         const firstName = event.target.First.value;
