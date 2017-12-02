@@ -12,7 +12,6 @@ import '/imports/ui/pages/filter';
 import '/imports/ui/pages/landing';
 import '/imports/ui/pages/user';
 import '/imports/ui/pages/learnmore';
-import '/imports/ui/pages/getstarted';
 import '/imports/ui/pages/messages';
 import '/imports/ui/stylesheets/style.css';
 import '/imports/api/base';

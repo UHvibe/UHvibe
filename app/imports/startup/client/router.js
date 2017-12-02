@@ -24,7 +24,7 @@ FlowRouter.route('/learnmore', {
 });
 
 // /*                        DIRECTORY ROUTE                       */
-//
+
 // function addDirectoryBodyClass() {
 //   $('body').addClass('directory-page-body');
 // }

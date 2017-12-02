@@ -1,3 +1,3 @@
 import './messages-page.html';
 import './messages-page.css';
-import './messages-page';
+import './messages-page.js';
