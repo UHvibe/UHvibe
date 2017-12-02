@@ -1,3 +1,3 @@
-import './profile-page.html';
-import './profile-page.css';
-import './profile-page';
+import './create-profile.html';
+import './create-profile.css';
+import './create-profile';
