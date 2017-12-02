@@ -88,6 +88,12 @@ h1 {
   padding-right: 10px;
 }
 
+.left.aligned.four.wide.column {
+  background-color: #2d2d2d;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #ffffff;
+}
 
 /*    Causing an error where if you hover over the genre choice, it just move rapidly left to right    */
 /*    Might need to change the properties                     */
