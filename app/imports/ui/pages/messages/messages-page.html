@@ -2,46 +2,27 @@
   {{#if Template.subscriptionsReady}}
     <div class="ui container">
       <div class="ui large buttons">
-        <button class="ui button">Received</button>
-        <button class="ui button">Sent</button>
+        <button class="receive ui button" type="submit">Received</button>
+        <button class="sent ui button" type="submit">Sent</button>
       </div>
       <table class="ui striped table">
         <thead>
-        <tr>
-          <th>Name</th>
-          <th>Date</th>
-          <th>Subject</th>
-        </tr>
+          <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Subject</th>
+            <th>Read</th>
+          </tr>
         </thead>
         <tbody>
-        <tr>
-          <td>John Lilki</td>
-          <td>June 9, 2017</td>
-          <td>Whats Up!</td>
-          <td><button class="ui button">Read</button></td>
-          <td><button class="ui button">Delete</button></td>
-        </tr>
-        <tr>
-          <td>Jamie Harington</td>
-          <td>June 11, 2017</td>
-          <td>Hi</td>
-          <td><button class="ui middle button">Read</button></td>
-          <td><button class="ui button">Delete</button></td>
-        </tr>
-        <tr>
-          <td>Jill Lewis</td>
-          <td>June 11, 2017</td>
-          <td>Hello</td>
-          <td><button class="ui button">Read</button></td>
-          <td><button class="ui button">Delete</button></td>
-        </tr>
-        <tr>
-          <td>John Lilki</td>
-          <td>June 14, 2017</td>
-          <td>Hey</td>
-          <td><button class="ui button">Read</button></td>
-          <td><button class="ui button">Delete</button></td>
-        </tr>
+        {{#each message in messageList}}
+          <tr>
+            <td>{{message.sender}}</td>
+            <td>{{message.date}}</td>
+            <td>{{message.subject}}</td>
+            <td><a href="{{pathFor 'Read_Message_Page' _id=message._id}}"></a></td>
+          </tr>
+        {{/each}}
         </tbody>
       </table>
     </div>
