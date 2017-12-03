@@ -94,6 +94,22 @@ userRoutes.route('/messages', {
   },
 });
 
+export const readMessagesPageRouteName = 'Read_Message_Page';
+userRoutes.route('/messages/readMessage', {
+  name: readMessagesPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: readMessagesPageRouteName });
+  },
+});
+
+export const sendMessagesPageRouteName = 'Send_Message_Page';
+userRoutes.route('/messages/sendMessage', {
+  name: sendMessagesPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: sendMessagesPageRouteName });
+  },
+});
+
 /*                        MISC ROUTES                       */
 FlowRouter.notFound = {
   action() {
