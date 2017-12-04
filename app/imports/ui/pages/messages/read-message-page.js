@@ -58,7 +58,23 @@ Template.Read_Message_Page.helpers({
 
 Template.Read_Message_Page.events({
   'click #reply'(event, instance) {
-    console.log('reply');
+    const newDate = new Date();
+    const username = FlowRouter.getParam('username');
+    const destination = 'In Progress';
+    const date = newDate.toString();
+    const subject = 'In Progress';
+    const content = 'In Progress';
+    const newMessage = Message.define({
+      username: username,
+      destination: destination,
+      date: date,
+      subject: subject,
+      content: content
+    });
+    FlowRouter.go('/:username/messages/sendMessage/:messageID', {
+      username: FlowRouter.getParam('username'),
+      messageID: newMessage
+    });
   },
   'click #delete'(event, instance) {
     const messages = Message.findAll();
@@ -68,9 +84,13 @@ Template.Read_Message_Page.events({
         Message.removeIt( { _id: id } );
       }
     }
-    FlowRouter.go('/:username/messages', { username: FlowRouter.getParam('username') })
+    FlowRouter.go('/:username/messages', {
+      username: FlowRouter.getParam('username')
+    });
   },
   'click #back'(event, instance) {
-    FlowRouter.go('/:username/messages', { username: FlowRouter.getParam('username') })
+    FlowRouter.go('/:username/messages', {
+      username: FlowRouter.getParam('username')
+    });
   }
 });
