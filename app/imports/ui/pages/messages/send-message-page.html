@@ -1,23 +1,26 @@
 <template name="Send_Message_Page">
   {{#if Template.subscriptionsReady}}
+    <div class="ui text container segment">
+      <form id="form" class="ui equal width form send-message-form" method="post">
 
-    <form id="form" class="send-message-form ui equal width form" method="post" style="background-color: #ffffff; height: 25%; color: #000000; padding: 4%; border: black solid 1px; margin: 2%">
+        <div class="fields">
+          <p>To: {{receiver}}</p><br>
+          <p>From: {{sending}}</p>
+        </div>
 
-      <p>From: {{sending}}</p><br>
+        <div class="field">
+          {{> Text_Form_Control label="Subject" placeholder="Subject" value=message.subject}}
+        </div>
 
-      <p>To: {{receiver}}</p><br>
+        <div class="field">
+          {{> TextArea_Form_Control label="Content" placeholder="Your Message" value=message.content}}
+        </div>
 
-      <div class="field">
-        {{> Text_Form_Control name="Subject" label="Subject" placeholder="Subject" value=message.subject }}
-      </div>
 
-      <div class="field">
-        {{> TextArea_Form_Control name="Content" label="Content" placeholder="Content" value=message.content }}
-      </div>
+        <button class="ui red button" type="submit">Send</button>
 
-      <button style="margin-top: 50px" id="cancel" class="ui red button" type="submit">Cancel</button>
-      <button style="margin-top: 50px" id="send" class="ui red button" type="submit">Send</button>
-    </form>
+      </form>
 
+    </div>
   {{/if}}
 </template>

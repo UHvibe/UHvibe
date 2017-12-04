@@ -1,8 +1,6 @@
+import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Template } from 'meteor/templating';
 import { Message } from '../../../api/message/MessageCollection.js';
-import { ReactiveDict } from 'meteor/reactive-dict';
-import { _ } from 'meteor/underscore';
-import { FlowRouter } from 'meteor/kadira:flow-router';
 
 Template.Read_Message_Page.onCreated(function onCreated() {
   this.subscribe(Message.getPublicationName());
@@ -12,52 +10,57 @@ Template.Read_Message_Page.helpers({
   sender() {
     const messages = Message.findAll();
     const id = FlowRouter.getParam('messageID');
-    for(let i = 0; i < messages.length; i++) {
-      if(id === messages[i]._id) {
+    for (let i = 0; i < messages.length; i++) {
+      if (id === messages[i]._id) {
         return messages[i].username;
       }
     }
+    return '';
   },
   receiver() {
     const messages = Message.findAll();
     const id = FlowRouter.getParam('messageID');
-    for(let i = 0; i < messages.length; i++) {
-      if(id === messages[i]._id) {
+    for (let i = 0; i < messages.length; i++) {
+      if (id === messages[i]._id) {
         return messages[i].destination;
       }
     }
+    return '';
   },
   messageArrival() {
     const messages = Message.findAll();
     const id = FlowRouter.getParam('messageID');
-    for(let i = 0; i < messages.length; i++) {
-      if(id === messages[i]._id) {
+    for (let i = 0; i < messages.length; i++) {
+      if (id === messages[i]._id) {
         return messages[i].date;
       }
     }
+    return '';
   },
   subject() {
     const messages = Message.findAll();
     const id = FlowRouter.getParam('messageID');
-    for(let i = 0; i < messages.length; i++) {
-      if(id === messages[i]._id) {
+    for (let i = 0; i < messages.length; i++) {
+      if (id === messages[i]._id) {
         return messages[i].subject;
       }
     }
+    return '';
   },
   messageContent() {
     const messages = Message.findAll();
     const id = FlowRouter.getParam('messageID');
-    for(let i = 0; i < messages.length; i++) {
-      if(id === messages[i]._id) {
+    for (let i = 0; i < messages.length; i++) {
+      if (id === messages[i]._id) {
         return messages[i].content;
       }
     }
+    return '';
   },
 });
 
 Template.Read_Message_Page.events({
-  'click #reply'(event, instance) {
+  'click #reply'() {
     const newDate = new Date();
     const username = FlowRouter.getParam('username');
     const destination = 'In Progress';
@@ -69,28 +72,28 @@ Template.Read_Message_Page.events({
       destination: destination,
       date: date,
       subject: subject,
-      content: content
+      content: content,
     });
     FlowRouter.go('/:username/messages/sendMessage/:messageID', {
       username: FlowRouter.getParam('username'),
-      messageID: newMessage
+      messageID: newMessage,
     });
   },
-  'click #delete'(event, instance) {
+  'click #delete'() {
     const messages = Message.findAll();
     const id = FlowRouter.getParam('messageID');
-    for(let i = 0; i < messages.length; i++) {
-      if(id === messages[i]._id) {
-        Message.removeIt( { _id: id } );
+    for (let i = 0; i < messages.length; i++) {
+      if (id === messages[i]._id) {
+        Message.removeIt({ _id: id });
       }
     }
     FlowRouter.go('/:username/messages', {
-      username: FlowRouter.getParam('username')
+      username: FlowRouter.getParam('username'),
     });
   },
-  'click #back'(event, instance) {
+  'click #back'() {
     FlowRouter.go('/:username/messages', {
-      username: FlowRouter.getParam('username')
+      username: FlowRouter.getParam('username'),
     });
-  }
+  },
 });

@@ -1,8 +1,6 @@
+import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Template } from 'meteor/templating';
 import { Message } from '../../../api/message/MessageCollection.js';
-import { ReactiveDict } from 'meteor/reactive-dict';
-import { _ } from 'meteor/underscore';
-import { FlowRouter } from 'meteor/kadira:flow-router';
 
 Template.Message_Page.onCreated(function onCreated() {
   this.subscribe(Message.getPublicationName());
@@ -16,4 +14,3 @@ Template.Message_Page.helpers({
     return FlowRouter.getParam('username');
   },
 });
-
