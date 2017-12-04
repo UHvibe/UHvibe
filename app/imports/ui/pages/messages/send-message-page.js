@@ -36,15 +36,12 @@ Template.Send_Message_Page.events({
   'submit .send-message-form'(event) {
     const newSubject = event.target.Subject.value;
     const newContent = event.target.Content.value;
-
     const messages = Message.findAll();
     const id = FlowRouter.getParam('messageID');
-
-    let receiver = '';
-
+    let receiver = 'In Progress...';
     for (let i = 0; i < messages.length; i++) {
       if (id === messages[i]._id) {
-        receiver = Message[i].destination;
+        receiver = messages[i].destination;
         Message.removeIt({ _id: id });
         break;
       }
@@ -61,8 +58,11 @@ Template.Send_Message_Page.events({
       subject: newSubject,
       content: newContent,
     });
+    FlowRouter.go('/:username/messages', {
+      username: FlowRouter.getParam('username'),
+    });
   },
-  'click .send-message-form #cancel'() {
+  'click #cancel'() {
     const messages = Message.findAll();
     const id = FlowRouter.getParam('messageID');
     for (let i = 0; i < messages.length; i++) {

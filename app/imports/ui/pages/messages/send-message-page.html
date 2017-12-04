@@ -1,12 +1,12 @@
 <template name="Send_Message_Page">
   {{#if Template.subscriptionsReady}}
     <div class="ui text container segment">
-      <form id="form" class="ui equal width form send-message-form" method="post">
+      <form id="form" class="ui equal width form send-message-form" method="post" style="background-color: #ffffff; height: 25%; color: #000000; padding: 4%; border: black solid 1px; margin: 2%">
 
-        <div class="fields">
-          <p>To: {{receiver}}</p><br>
-          <p>From: {{sending}}</p>
-        </div>
+        <p>To: {{receiver}}</p><br>
+
+        <p>From: {{sending}}</p>
+
 
         <div class="field">
           {{> Text_Form_Control label="Subject" placeholder="Subject" value=message.subject}}
@@ -17,8 +17,8 @@
         </div>
 
 
-        <button class="ui red button" type="submit">Send</button>
-
+        <button class="ui red button" id="send" type="submit">Send</button>
+        <button class="ui red button" id="cancel">Cancel</button>
       </form>
 
     </div>
