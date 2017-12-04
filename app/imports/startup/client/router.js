@@ -2,7 +2,6 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 import { $ } from 'meteor/jquery';
 
-
 /*                        LANDING ROUTE                       */
 
 export const landingPageRouteName = 'Landing_Page';
@@ -95,7 +94,7 @@ userRoutes.route('/messages', {
 });
 
 export const readMessagesPageRouteName = 'Read_Message_Page';
-userRoutes.route('/messages/readMessage', {
+userRoutes.route('/messages/readMessage/:messageID', {
   name: readMessagesPageRouteName,
   action() {
     BlazeLayout.render('User_Layout', { main: readMessagesPageRouteName });
@@ -103,7 +102,7 @@ userRoutes.route('/messages/readMessage', {
 });
 
 export const sendMessagesPageRouteName = 'Send_Message_Page';
-userRoutes.route('/messages/sendMessage', {
+userRoutes.route('/messages/sendMessage/:messageID', {
   name: sendMessagesPageRouteName,
   action() {
     BlazeLayout.render('User_Layout', { main: sendMessagesPageRouteName });

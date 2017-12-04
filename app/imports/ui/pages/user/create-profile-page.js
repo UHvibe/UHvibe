@@ -45,38 +45,38 @@ Template.Create_Profile_Page.helpers({
 
 
 Template.Create_Profile_Page.events({
-    'submit .profile-data-form'(event, instance) {
-        event.preventDefault();
-        const firstName = event.target.First.value;
-        const lastName = event.target.Last.value;
-        const username = FlowRouter.getParam('username'); // schema requires username.
-        const picture = event.target.Picture.value;
-        const skills = event.target.Skills.value;
-        const youtube = event.target.YouTube.value;
-        const soundCloud = event.target.SoundCloud.value;
-        const other = event.target.Other.value;
-        const bio = event.target.Bio.value;
-        const selectedInterests = _.filter(event.target.Interests.selectedOptions, (option) => option.selected);
-        const interests = _.map(selectedInterests, (option) => option.value);
+  'submit .profile-data-form'(event, instance) {
+    event.preventDefault();
+    const firstName = event.target.First.value;
+    const lastName = event.target.Last.value;
+    const username = FlowRouter.getParam('username'); // schema requires username.
+    const picture = event.target.Picture.value;
+    const skills = event.target.Skills.value;
+    const youtube = event.target.YouTube.value;
+    const soundCloud = event.target.SoundCloud.value;
+    const other = event.target.Other.value;
+    const bio = event.target.Bio.value;
+    const selectedInterests = _.filter(event.target.Interests.selectedOptions, (option) => option.selected);
+    const interests = _.map(selectedInterests, (option) => option.value);
 
-        const updatedProfileData = { firstName, lastName, skills, picture, youtube, soundCloud, other, bio, interests,
-            username };
+    const updatedProfileData = { firstName, lastName, skills, picture, youtube, soundCloud, other, bio, interests,
+      username };
 
-        // Clear out any old validation errors.
-        instance.context.reset();
-        // Invoke clean so that updatedProfileData reflects what will be inserted.
-        const cleanData = Profiles.getSchema().clean(updatedProfileData);
-        // Determine validity.
-        instance.context.validate(cleanData);
+    // Clear out any old validation errors.
+    instance.context.reset();
+    // Invoke clean so that updatedProfileData reflects what will be inserted.
+    const cleanData = Profiles.getSchema().clean(updatedProfileData);
+    // Determine validity.
+    instance.context.validate(cleanData);
 
-        if (instance.context.isValid()) {
-            const docID = Profiles.findDoc(FlowRouter.getParam('username'))._id;
-            const id = Profiles.update(docID, { $set: cleanData });
-            instance.messageFlags.set(displaySuccessMessage, id);
-            instance.messageFlags.set(displayErrorMessages, false);
-        } else {
-            instance.messageFlags.set(displaySuccessMessage, false);
-            instance.messageFlags.set(displayErrorMessages, true);
-        }
-    },
+    if (instance.context.isValid()) {
+      const docID = Profiles.findDoc(FlowRouter.getParam('username'))._id;
+      const id = Profiles.update(docID, { $set: cleanData });
+      instance.messageFlags.set(displaySuccessMessage, id);
+      instance.messageFlags.set(displayErrorMessages, false);
+    } else {
+      instance.messageFlags.set(displaySuccessMessage, false);
+      instance.messageFlags.set(displayErrorMessages, true);
+    }
+  },
 });

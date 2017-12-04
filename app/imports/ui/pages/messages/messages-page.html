@@ -8,7 +8,8 @@
       <table class="ui striped table">
         <thead>
           <tr>
-            <th>Name</th>
+            <th>To</th>
+            <th>From</th>
             <th>Date</th>
             <th>Subject</th>
             <th>Read</th>
@@ -17,10 +18,11 @@
         <tbody>
         {{#each message in messageList}}
           <tr>
-            <td>{{message.sender}}</td>
+            <td>{{message.destination}}</td>
+            <td>{{message.username}}</td>
             <td>{{message.date}}</td>
             <td>{{message.subject}}</td>
-            <td><a href="{{pathFor 'Read_Message_Page' _id=message._id}}"></a></td>
+            <td><a href="{{pathFor 'Read_Message_Page' username=routeUserName messageID=message._id}}">Read</a></td>
           </tr>
         {{/each}}
         </tbody>

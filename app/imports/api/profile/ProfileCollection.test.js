@@ -21,7 +21,7 @@ if (Meteor.isServer) {
     const youtube = 'http://github.com/philipjohnson';
     const soundCloud = 'http://github.com/philipjohnson';
     const other = '';
-    const defineObject = { firstName, lastName, username, bio, interests, picture, skills, youtube, soundCloud, other};
+    const defineObject = { firstName, lastName, username, bio, interests, picture, skills, youtube, soundCloud, other };
 
     before(function setup() {
       removeAllEntities();
@@ -69,7 +69,7 @@ if (Meteor.isServer) {
     it('#define (duplicate interests)', function test() {
       const duplicateInterests = [interestName, interestName];
       const defineObject3 = { firstName, lastName, username, bio, interests: duplicateInterests, picture, skills,
-        youtube, soundCloud, other};
+        youtube, soundCloud, other };
       expect(function foo() { Profiles.define(defineObject3); }).to.throw(Error);
     });
   });

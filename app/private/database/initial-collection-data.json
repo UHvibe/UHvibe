@@ -164,6 +164,25 @@
           "picture": "/images/casanova.jpg"
         }
       ]
+    },
+    {
+      "name": "MessageCollection",
+      "contents": [
+        {
+          "username": "MrMusic",
+          "destination": "TrumpetGeek",
+          "date": "December 1, 2017",
+          "subject": "Hey",
+          "content": "Yo, Do you want to hang out?"
+        },
+        {
+          "username": "TrumpetGeek",
+          "destination": "MrMusic",
+          "date": "December 2, 2017",
+          "subject": "No",
+          "content": "Why?"
+        }
+      ]
     }
   ]
 }
