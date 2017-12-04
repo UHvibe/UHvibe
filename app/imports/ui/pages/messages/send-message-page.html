@@ -1,23 +1,23 @@
 <template name="Send_Message_Page">
   {{#if Template.subscriptionsReady}}
 
-    <div class="ui text container">
-      <form id="form" class="ui equal width form send-message-form {{ successClass }} {{ errorClass }}">
-        <div style="background-color: #ffffff; height: 25%; color: #000000; padding: 4%; border: black solid 1px; margin: 2%">
-          <p>From: {{sender}}</p><br>
-          <p>To: {{receiver}}</p><br>
-          {{> Text_Form_Control label="Subject" placeholder="Subject" value=message.subject errorMessage=(fieldError
-              "subject")}}
-        </div>
+    <form id="form" class="send-message-form ui equal width form" method="post" style="background-color: #ffffff; height: 25%; color: #000000; padding: 4%; border: black solid 1px; margin: 2%">
 
-        <div style="background-color: #ffffff; height: 25%; color: #000000; padding: 4%; border: black solid 1px; margin: 2%">
-          {{> TextArea_Form_Control label="Content" value=message.content placeholder="Message Here"
-              errorMessage=(fieldError "content")}}
-        </div>
+      <p>From: {{sending}}</p><br>
 
-        <button style="margin-top: 50px" id="cancel" class="ui red button" type="submit">Cancel</button>
-        <button style="margin-top: 50px" id="send" class="ui red button" type="submit">Send</button>
-      </form>
-    </div>
+      <p>To: {{receiver}}</p><br>
+
+      <div class="field">
+        {{> Text_Form_Control name="Subject" label="Subject" placeholder="Subject" value=message.subject }}
+      </div>
+
+      <div class="field">
+        {{> TextArea_Form_Control name="Content" label="Content" placeholder="Content" value=message.content }}
+      </div>
+
+      <button style="margin-top: 50px" id="cancel" class="ui red button" type="submit">Cancel</button>
+      <button style="margin-top: 50px" id="send" class="ui red button" type="submit">Send</button>
+    </form>
+
   {{/if}}
 </template>
