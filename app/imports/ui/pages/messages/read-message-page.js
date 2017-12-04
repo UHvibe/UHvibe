@@ -57,5 +57,20 @@ Template.Read_Message_Page.helpers({
 });
 
 Template.Read_Message_Page.events({
-
+  'click #reply'(event, instance) {
+    console.log('reply');
+  },
+  'click #delete'(event, instance) {
+    const messages = Message.findAll();
+    const id = FlowRouter.getParam('messageID');
+    for(let i = 0; i < messages.length; i++) {
+      if(id === messages[i]._id) {
+        Message.removeIt( { _id: id } );
+      }
+    }
+    FlowRouter.go('/:username/messages', { username: FlowRouter.getParam('username') })
+  },
+  'click #back'(event, instance) {
+    FlowRouter.go('/:username/messages', { username: FlowRouter.getParam('username') })
+  }
 });
