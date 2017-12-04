@@ -2,20 +2,21 @@
     {{#if Template.subscriptionsReady}}
 
       <div class="ui text container">
-        <form id="form" class="ui equal width form read-message-form">
 
-          <div class="fields">
+        <div style="background-color: #ffffff; height: 25%; color: #000000; padding: 4%; border: black solid 1px; margin: 2%">
+          <p>From: {{sender}}</p><br>
+          <p>To: {{receiver}}</p><br>
+          <p>Date: {{messageArrival}}</p> <br>
+          <p>Subject: {{subject}}</p>
+        </div>
 
-          </div>
+        <div style="background-color: #ffffff; height: 25%; color: #000000; padding: 4%; border: black solid 1px; margin: 2%">
+          <p>{{messageContent}}</p>
+        </div>
 
-          <div class="fields">
+        <button style="margin-top: 50px" id="reply" class="ui red button" type="submit">Reply</button>
+        <button style="margin-top: 50px" id="delete" class="ui red button" type="submit">Delete</button>
 
-          </div>
-
-          <button style="margin-top: 50px" id="reply" class="ui red button" type="submit">Reply</button>
-          <button style="margin-top: 50px" id="delete" class="ui red button" type="submit">Delete</button>
-
-        </form>
       </div>
     {{/if}}
 </template>

@@ -7,41 +7,34 @@ class MessageCollection extends BaseCollection {
 
   constructor() {
     super('Message', new SimpleSchema({
-      messageID: {type: String},
       username: {type: String},
       destination: {type: String},
       date: {type: String},
       subject: {type: String},
       content: {type: String},
-      isSent: {type: Boolean},
-      isReceive: {type: Boolean},
     }, {tracker: Tracker}));
   }
 
-  define({ messageID = '', username, destination = '', date = '', subject = '', content = '', isSent = false, isReceive = false }) {
+  define({ username, destination = '', date = '', subject = '', content = '' }) {
     const checkPattern = {
-      messageID: String, username: String, destination: String, date: String, subject: String, content: String,
-      isSent: Boolean, isReceive: Boolean
+      username: String, destination: String, date: String, subject: String, content: String
     };
-    check({messageID, username, destination, date, subject, content, isSent, isReceive}, checkPattern);
+    check({username, destination, date, subject, content}, checkPattern);
 
     return this._collection.insert({
-      messageID, username, destination, date, subject, content, isSent, isReceive
+      username, destination, date, subject, content
     });
   }
 
 
   dumpOne(docID) {
     const doc = this.findDoc(docID);
-    const messageID = doc.messageID;
     const username = doc.username;
     const destination = doc.destination;
     const date = doc.date;
     const subject = doc.subject;
     const content = doc.content;
-    const isSent = doc.isSent;
-    const isReceive = doc.isReceive;
-    return {messageID, username, destination, date, subject, content, isSent, isReceive};
+    return {username, destination, date, subject, content};
   }
 }
 

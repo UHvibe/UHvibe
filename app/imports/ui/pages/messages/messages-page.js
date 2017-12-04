@@ -16,3 +16,4 @@ Template.Message_Page.helpers({
     return FlowRouter.getParam('username');
   },
 });
+

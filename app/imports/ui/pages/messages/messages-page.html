@@ -22,7 +22,7 @@
             <td>{{message.username}}</td>
             <td>{{message.date}}</td>
             <td>{{message.subject}}</td>
-            <td><a href="{{pathFor 'Read_Message_Page' username=routeUserName messageID=message.messageID}}">Read</a></td>
+            <td><a href="{{pathFor 'Read_Message_Page' username=routeUserName messageID=message._id}}">Read</a></td>
           </tr>
         {{/each}}
         </tbody>

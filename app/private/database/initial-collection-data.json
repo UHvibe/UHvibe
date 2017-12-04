@@ -169,24 +169,18 @@
       "name": "MessageCollection",
       "contents": [
         {
-          "messageID": "1",
           "username": "MrMusic",
           "destination": "TrumpetGeek",
           "date": "December 1, 2017",
           "subject": "Hey",
-          "content": "Yo, Do you want to hang out?",
-          "isSent": true,
-          "isReceive": false
+          "content": "Yo, Do you want to hang out?"
         },
         {
-          "messageID": "2",
           "username": "TrumpetGeek",
           "destination": "MrMusic",
           "date": "December 2, 2017",
           "subject": "No",
-          "content": "Why?",
-          "isSent": false,
-          "isReceive": true
+          "content": "Why?"
         }
       ]
     }
