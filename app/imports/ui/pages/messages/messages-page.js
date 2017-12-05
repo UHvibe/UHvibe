@@ -8,7 +8,13 @@ Template.Message_Page.onCreated(function onCreated() {
 
 Template.Message_Page.helpers({
   messageList() {
-    return Message.find();
+    const id = FlowRouter.getParam('username');
+    return Message.find({
+      $or: [
+        { destination: id },
+        { username: id },
+      ],
+    });
   },
   routeUserName() {
     return FlowRouter.getParam('username');
