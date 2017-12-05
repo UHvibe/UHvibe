@@ -7,14 +7,13 @@
                     Your Profile
                 </div>
 
-
                 <div class="ui internally celled grid">
                     <div class="row">
                         <div class="five wide column">
                             {{picture}}
                         </div>
                         <div class="ten wide column">
-                            <table class="ui celled structured table">
+                            <table id="table" class="ui celled structured table">
                                 <tbody>
                                 <tr>
                                     <td>
@@ -36,24 +35,23 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <div class="ui ribbon label">Social Media</div>
+                                        <div id="socialMediaLabel" class="ui ribbon label">Social Media</div>
                                     </td>
-                                    <td class="right aligned">YouTube:</td>
-                                    <td>{{youtube}}</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td class="right aligned">SoundCloud:</td>
-                                    <td>{{soundCloud}}</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td class="right aligned">Other:</td>
-                                    <td>{{other}}</td>
+                                    <td class="right aligned">
+                                        YouTube: <br>
+                                        SoundCloud: <br>
+                                        Other:
+                                    </td>
+                                    <td>
+                                        {{youtube}}<br>
+                                        {{soundCloud}}<br>
+                                        {{other}}
+                                    </td>
+
                                 </tr>
                                 <tr>
                                     <td>
-                                        <div class="ui ribbon label">Bio</div>
+                                        <div id="bioLabel" class="ui ribbon label">Bio</div>
                                     </td>
                                     <td colspan="2">{{bio}}</td>
                                 </tr>
@@ -65,10 +63,12 @@
                         </div>
 
                     </div>
-                </div>
-                <div class="right item">
+
                     <button class="ui red button" type="submit">Edit</button>
+
+
                 </div>
+
 
             </div>
 
