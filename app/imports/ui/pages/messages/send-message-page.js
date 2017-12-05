@@ -34,35 +34,39 @@ Template.Send_Message_Page.helpers({
 
 Template.Send_Message_Page.events({
   'submit .send-message-form'(event) {
-    const newSubject = event.target.Subject.value;
-    const newContent = event.target.Content.value;
-    const messages = Message.findAll();
-    const id = FlowRouter.getParam('messageID');
-    let receiver = 'In Progress...';
-    for (let i = 0; i < messages.length; i++) {
-      if (id === messages[i]._id) {
-        receiver = messages[i].destination;
-        Message.removeIt({ _id: id });
-        break;
+    if (confirm('Send?')) {
+      event.preventDefault();
+      const newSubject = event.target.Subject.value;
+      const newContent = event.target.Content.value;
+      const messages = Message.findAll();
+      const id = FlowRouter.getParam('messageID');
+      let receiver = 'In Progress...';
+      for (let i = 0; i < messages.length; i++) {
+        if (id === messages[i]._id) {
+          receiver = messages[i].destination;
+          Message.removeIt({ _id: id });
+          break;
+        }
       }
+      const newDate = new Date();
+      const username = FlowRouter.getParam('username');
+      const destination = receiver;
+      const date = newDate.toString();
+      Message.define({
+        _id: id,
+        username: username,
+        destination: destination,
+        date: date,
+        subject: newSubject,
+        content: newContent,
+      });
+      FlowRouter.go('/:username/messages', {
+        username: FlowRouter.getParam('username'),
+      });
     }
-    const newDate = new Date();
-    const username = FlowRouter.getParam('username');
-    const destination = receiver;
-    const date = newDate.toString();
-    Message.define({
-      _id: id,
-      username: username,
-      destination: destination,
-      date: date,
-      subject: newSubject,
-      content: newContent,
-    });
-    FlowRouter.go('/:username/messages', {
-      username: FlowRouter.getParam('username'),
-    });
   },
-  'click #cancel'() {
+  'click #cancel'(event) {
+    event.preventDefault();
     const messages = Message.findAll();
     const id = FlowRouter.getParam('messageID');
     for (let i = 0; i < messages.length; i++) {

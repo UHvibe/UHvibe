@@ -60,10 +60,20 @@ Template.Read_Message_Page.helpers({
 });
 
 Template.Read_Message_Page.events({
-  'click #reply'() {
+  'click #reply'(event) {
+    event.preventDefault();
+    let tempDestination = ' ';
+    const messages = Message.findAll();
+    const id = FlowRouter.getParam('messageID');
+    for (let i = 0; i < messages.length; i++) {
+      if (id === messages[i]._id) {
+        tempDestination = messages[i].username;
+        break;
+      }
+    }
     const newDate = new Date();
     const username = FlowRouter.getParam('username');
-    const destination = 'In Progress';
+    const destination = tempDestination;
     const date = newDate.toString();
     const subject = 'In Progress';
     const content = 'In Progress';
@@ -79,19 +89,23 @@ Template.Read_Message_Page.events({
       messageID: newMessage,
     });
   },
-  'click #delete'() {
-    const messages = Message.findAll();
-    const id = FlowRouter.getParam('messageID');
-    for (let i = 0; i < messages.length; i++) {
-      if (id === messages[i]._id) {
-        Message.removeIt({ _id: id });
+  'click #delete'(event) {
+    event.preventDefault();
+    if (confirm('Are you sure you want to delete?')) {
+      const messages = Message.findAll();
+      const id = FlowRouter.getParam('messageID');
+      for (let i = 0; i < messages.length; i++) {
+        if (id === messages[i]._id) {
+          Message.removeIt({ _id: id });
+        }
       }
+      FlowRouter.go('/:username/messages', {
+        username: FlowRouter.getParam('username'),
+      });
     }
-    FlowRouter.go('/:username/messages', {
-      username: FlowRouter.getParam('username'),
-    });
   },
-  'click #back'() {
+  'click #back'(event) {
+    event.preventDefault();
     FlowRouter.go('/:username/messages', {
       username: FlowRouter.getParam('username'),
     });
