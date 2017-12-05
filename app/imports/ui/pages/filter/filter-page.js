@@ -3,6 +3,8 @@ import { ReactiveDict } from 'meteor/reactive-dict';
 import { _ } from 'meteor/underscore';
 import { Profiles } from '/imports/api/profile/ProfileCollection';
 import { Interests } from '/imports/api/interest/InterestCollection';
+import { FlowRouter } from 'meteor/kadira:flow-router';
+import { Message } from '../../../api/message/MessageCollection.js';
 
 const selectedInterestsKey = 'selectedInterests';
 
@@ -27,12 +29,12 @@ Template.Filter_Page.helpers({
 
   interests() {
     return _.map(Interests.findAll(),
-      function makeInterestObject(interest) {
-        return {
-          label: interest.name,
-          selected: _.contains(Template.instance().messageFlags.get(selectedInterestsKey), interest.name),
-        };
-      });
+        function makeInterestObject(interest) {
+          return {
+            label: interest.name,
+            selected: _.contains(Template.instance().messageFlags.get(selectedInterestsKey), interest.name),
+          };
+        });
   },
 });
 
@@ -42,5 +44,23 @@ Template.Filter_Page.events({
     const selectedOptions = _.filter(event.target.Interests.selectedOptions, (option) => option.selected);
     instance.messageFlags.set(selectedInterestsKey, _.map(selectedOptions, (option) => option.value));
   },
+  'click #message-to-profile'(event) {
+    const newDate = new Date();
+    const username = FlowRouter.getParam('username');
+    const destination = event.target.text;
+    const date = newDate.toString();
+    const subject = 'In Progress';
+    const content = 'In Progress';
+    const newMessage = Message.define({
+      username: username,
+      destination: destination,
+      date: date,
+      subject: subject,
+      content: content,
+    });
+    FlowRouter.go('/:username/messages/sendMessage/:messageID', {
+      username: FlowRouter.getParam('username'),
+      messageID: newMessage,
+    });
+  },
 });
-
