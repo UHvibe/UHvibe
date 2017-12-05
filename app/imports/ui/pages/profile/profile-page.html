@@ -1,17 +1,79 @@
 <template name="Profile_Page">
-  <div class="body">
-    {{#if Template.subscriptionsReady}}
+    <div class="body">
+        {{#if Template.subscriptionsReady}}
 
-      <div class="ui text container segment">
-        <div class="ui dividing header">
-          Your Profile
-        </div>
-
-
-      </div>
+            <div class="ui text container segment">
+                <div class="ui dividing header">
+                    Your Profile
+                </div>
 
 
-    {{/if}}
+                <div class="ui internally celled grid">
+                    <div class="row">
+                        <div class="five wide column">
+                            {{picture}}
+                        </div>
+                        <div class="ten wide column">
+                            <table class="ui celled structured table">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="ui ribbon label">Name</div>
+                                    </td>
+                                    <td colspan="2" class="center aligned">{{firstName}} {{lastName}}</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="ui ribbon label">Genre Interests</div>
+                                    </td>
+                                    <td colspan="2" class="center aligned">{{interests}}</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="ui ribbon label">Skills</div>
+                                    </td>
+                                    <td colspan="2" class="center aligned">{{skills}}</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="ui ribbon label">Social Media</div>
+                                    </td>
+                                    <td class="right aligned">YouTube:</td>
+                                    <td>{{youtube}}</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="right aligned">SoundCloud:</td>
+                                    <td>{{soundCloud}}</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="right aligned">Other:</td>
+                                    <td>{{other}}</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="ui ribbon label">Bio</div>
+                                    </td>
+                                    <td colspan="2">{{bio}}</td>
+                                </tr>
 
-  </div>
+                                </tbody>
+
+
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="right item">
+                    <button class="ui red button" type="submit">Edit</button>
+                </div>
+
+            </div>
+
+
+        {{/if}}
+
+    </div>
 </template>
