@@ -79,4 +79,11 @@ Template.Edit_Profile_Page.events({
             instance.messageFlags.set(displayErrorMessages, true);
         }
     },
+    'click #profile'(event) {
+        const username = FlowRouter.getParam('username');
+
+        FlowRouter.go('/:username/profile', {
+            username: FlowRouter.getParam('username'),
+        });
+    },
 });
