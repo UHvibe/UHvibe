@@ -98,21 +98,21 @@
       "name": "ProfileCollection",
       "contents": [
         {
-          "firstName": "Lee",
-          "lastName": "Altenberg",
-          "username": "altenberg",
+          "firstName": "Martin",
+          "lastName": "Smith",
+          "username": "msmith",
           "bio": "I have been playing violin as a hobby for 5 years. I hope to join a group that has interests in classical music.",
           "interests": [
             "Classical",
             "Pop (Popular music)"
           ],
           "skills": "Violin",
-          "picture": "/images/altenberg.jpg"
+          "picture": "/images/usericon.png"
         },
         {
-          "firstName": "Kyungim",
-          "lastName": "Baek",
-          "username": "baek",
+          "firstName": "Hubert",
+          "lastName": "Stanton",
+          "username": "hstanton",
           "bio": "I have been playing piano since I was 5 years old. I hope to join a group that has interestes in Jazz, Classical, or Pop music",
           "interests": [
             "Jazz",
@@ -120,12 +120,12 @@
             "Pop (Popular music)"
           ],
           "skills": "Piano, guitar",
-          "picture": "/images/baek.jpg"
+          "picture": "/images/usericon.png"
         },
         {
-          "firstName": "Edo",
-          "lastName": "Biagioni",
-          "username": "esb",
+          "firstName": "Monica",
+          "lastName": "Stevenson",
+          "username": "mstevenson",
           "bio": "I like playing guitar and base as a hobby, I learned how to play saxephone in highschool.",
           "interests": [
             "Electronic",
@@ -133,12 +133,12 @@
             "Rock"
           ],
           "skills": "Guitar, Saxephone, Base",
-          "picture": "/images/biagioni.jpg"
+          "picture": "/images/usericon.png"
         },
         {
-          "firstName": "Kim",
-          "lastName": "Binsted",
-          "username": "binsted",
+          "firstName": "Chelsea",
+          "lastName": "Chong",
+          "username": "cchong",
           "bio": "I like pop and rock music, and I am looking for a band I could join in.",
           "interests": [
             "Pop (Popular music)",
@@ -146,22 +146,7 @@
             "New Age"
           ],
           "skills": "Guitar, Singing, Base",
-          "picture": "/images/binsted.jpg"
-        },
-        {
-          "firstName": "Henri",
-          "lastName": "Casanova",
-          "username": "henric",
-          "github": "henricasanova",
-          "bio": "I like jazz, Latin, pop and rock music. I hope to join a group with similar interests.",
-          "interests": [
-            "Jazz",
-            "Latin",
-            "Pop (Popular music)",
-            "Rock"
-          ],
-          "skills": "Drums, Guitar, trumpet",
-          "picture": "/images/casanova.jpg"
+          "picture": "/images/usericon.png"
         }
       ]
     },
