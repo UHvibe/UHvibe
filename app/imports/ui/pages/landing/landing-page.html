@@ -4,18 +4,18 @@
         <div class="ui borderless menu">
             <div class="right menu">
                 <div id="learnmoreText" class="item"><a class="{{isActiveRoute " LearnMore_Page"}} item"
-                                                        href="{{pathFor "LearnMore_Page" username=routeUserName}}">LEARN
+                                                        href="{{pathFor "LearnMore_Page" username=userLanding}}">LEARN
                     MORE</a>
                 </div>
                 {{#if currentUser}}
                     <div class="item">
-                        <a style="color: white" class="{{isActiveRoute "Filter_Page"}} item" href="{{pathFor "Profile_Page" username=routeUserName}}">
+                        <a style="color: white" class="{{isActiveRoute "Filter_Page"}} item" href="{{pathFor "Profile_Page" username=userLanding}}">
                         PROFILE</a>
                     </div>
-                    <div class="item"><a style="color: white" class="{{isActiveRoute "Filter_Page"}} item" href="{{pathFor "Filter_Page" username=routeUserName}}">
+                    <div class="item"><a style="color: white" class="{{isActiveRoute "Filter_Page"}} item" href="{{pathFor "Filter_Page" username=userLanding}}">
                         SEARCH</a>
                     </div>
-                    <div class="item"><a style="color: white" class="{{isActiveRoute "Message_Page"}} item" href="{{pathFor "Message_Page" username=routeUserName}}">
+                    <div class="item"><a style="color: white" class="{{isActiveRoute "Message_Page"}} item" href="{{pathFor "Message_Page" username=userLanding}}">
                         MESSAGES</a>
                     </div>
                 {{/if}}
