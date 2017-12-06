@@ -1,10 +1,10 @@
-<template name="Create_Profile_Page">
+<template name="Edit_Profile_Page">
     <div class="body">
         {{#if Template.subscriptionsReady}}
 
             <div class="ui text container segment">
                 <div class="ui dividing header">
-                    Create A Profile
+                    Edit Profile
                 </div>
                 <form id="form" class="ui equal width form profile-data-form {{ successClass }} {{ errorClass }}">
 
@@ -45,6 +45,7 @@
 
 
                     <button class="ui red button" type="submit">Submit</button>
+
 
                     {{#if displaySuccessMessage}}
                         <div class="ui success message">

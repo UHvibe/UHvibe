@@ -40,7 +40,7 @@ Template.Profile_Page.helpers({
         const picture = Profiles.findAll();
         const username = FlowRouter.getParam('username');
 
-        for (let i = 0; i < picture.length ; i++) {
+        for (let i = 0; i < picture.length; i++) {
             if (username == picture[i].username) {
                 return picture[i].picture;
             }
@@ -121,3 +121,16 @@ Template.Profile_Page.helpers({
 
 
 });
+
+
+Template.Profile_Page.events({
+    'click #edit-profile'(event) {
+        const username = FlowRouter.getParam('username');
+
+        FlowRouter.go('/:username/editProfile', {
+            username: FlowRouter.getParam('username'),
+        });
+    },
+});
+
+

@@ -77,6 +77,14 @@ userRoutes.route('/profile', {
   },
 });
 
+export const editProfilePageRouteName = 'Edit_Profile_Page';
+userRoutes.route('/editProfile', {
+    name: editProfilePageRouteName,
+    action() {
+        BlazeLayout.render('User_Layout', { main: editProfilePageRouteName });
+    },
+});
+
 export const searchPageRouteName = 'Filter_Page';
 userRoutes.route('/search', {
   name: searchPageRouteName,
