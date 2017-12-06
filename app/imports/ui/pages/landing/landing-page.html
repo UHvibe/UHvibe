@@ -1,45 +1,63 @@
 <template name="Landing_Page">
 
-  <div class="landing-section-1">
-    <div class="ui borderless menu">
-      <div class="right menu">
-        <div id="learnmoreText" class="item"><a class="{{isActiveRoute " LearnMore_Page"}} item"
-          href="{{pathFor "LearnMore_Page" username=routeUserName}}">LEARN MORE</a>
+    <div class="landing-section-1">
+        <div class="ui borderless menu">
+            <div class="right menu">
+                <div id="learnmoreText" class="item"><a class="{{isActiveRoute " LearnMore_Page"}} item"
+                                                        href="{{pathFor "LearnMore_Page" username=routeUserName}}">LEARN
+                    MORE</a>
+                </div>
+                {{#if currentUser}}
+                    <div class="item">
+                        <a style="color: white" class="{{isActiveRoute "Filter_Page"}} item" href="{{pathFor "Profile_Page" username=routeUserName}}">
+                        PROFILE</a>
+                    </div>
+                    <div class="item"><a style="color: white" class="{{isActiveRoute "Filter_Page"}} item" href="{{pathFor "Filter_Page" username=routeUserName}}">
+                        SEARCH</a>
+                    </div>
+                    <div class="item"><a style="color: white" class="{{isActiveRoute "Message_Page"}} item" href="{{pathFor "Message_Page" username=routeUserName}}">
+                        MESSAGES</a>
+                    </div>
+                {{/if}}
+
+                <div class="item">
+                    {{> Cas_Login}}
+                </div>
+            </div>
         </div>
-        <div class="item">
-          {{> Cas_Login}}
+
+        <div class="ui centered grid">
+            <div class="sixteen wide column">
+                <div class="logo">
+                    <img class="ui large centered image" src="https://image.ibb.co/hvnDCm/LOGO_2_WORDS.png">
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
-    <div class="ui centered grid">
-      <div class="sixteen wide column">
-        <div class="logo">
-          <img class="ui large centered image" src="https://image.ibb.co/hvnDCm/LOGO_2_WORDS.png">
+    <div class="landing-section-2">
+        <div id="learn-more" class="ui centered grid">
+            <div class="five wide center aligned column">
+                <i class="huge red write square icon"></i><br><br>
+                Have a passion for music? Interested in meeting others with the same passion? Then UHVibe is perfect for
+                you!
+                UHVibe connects UH students based off of musical taste, capabilities and goals. Sign up today and vibe.
+            </div>
+            <div class="five wide center aligned column">
+                <i class="huge red search icon"></i><br><br>
+                Once you create a profile, you can list your own musical biography. Customize your page to display your
+                favorite
+                genre, instruments and more! Think of UHVibe as your professional music portfolio. Add links to your
+                YouTube and
+                SoundCloud all in one place.
+            </div>
+            <div class="five wide center aligned column">
+                <i class="huge red newspaper icon"></i><br><br>
+                Already a member? Start your search for UHVibe members today. Browser profiles filtered by tastes,
+                capabilities
+                and goals. Other UH students are waiting for you! Browse UHVibe members today.
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-
-  <div class="landing-section-2">
-    <div id="learn-more" class="ui centered grid">
-      <div class="five wide center aligned column">
-        <i class="huge red write square icon"></i><br><br>
-        Have a passion for music? Interested in meeting others with the same passion? Then UHVibe is perfect for you!
-        UHVibe connects UH students based off of musical taste, capabilities and goals. Sign up today and vibe.
-      </div>
-      <div class="five wide center aligned column">
-        <i class="huge red search icon"></i><br><br>
-        Once you create a profile, you can list your own musical biography. Customize your page to display your favorite
-        genre, instruments and more! Think of UHVibe as your professional music portfolio. Add links to your YouTube and
-        SoundCloud all in one place.
-      </div>
-      <div class="five wide center aligned column">
-        <i class="huge red newspaper icon"></i><br><br>
-        Already a member? Start your search for UHVibe members today. Browser profiles filtered by tastes, capabilities
-        and goals. Other UH students are waiting for you! Browse UHVibe members today.
-      </div>
-    </div>
-  </div>
 
 </template>
