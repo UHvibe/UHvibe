@@ -121,3 +121,14 @@ Template.Profile_Page.helpers({
 
 
 });
+
+
+Template.Profile_Page.events({
+    'click #edit-profile'(event) {
+        const username = FlowRouter.getParam('username');
+
+        FlowRouter.go('/:username/editProfile', {
+            username: FlowRouter.getParam('username'),
+        });
+    },
+});
