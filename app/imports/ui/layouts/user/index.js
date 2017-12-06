@@ -8,3 +8,5 @@ import './user-layout.html';
 import './visitor-layout.html';
 import './visitor-layout.css';
 import './visitor-header.html';
+import './visitor-footer.html';
+
