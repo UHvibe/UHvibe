@@ -84,7 +84,6 @@ class ProfileCollection extends BaseCollection {
     });
   }
 
-  
   /**
    * Returns an object representing the Profile docID in a format acceptable to define().
    * @param docID The docID of a Profile.
