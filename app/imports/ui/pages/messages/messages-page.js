@@ -11,12 +11,10 @@ Template.Message_Page.onCreated(function () {
 
 Template.Message_Page.helpers({
   receivedMessageList() {
-    console.log('receivemessage');
     const id = Meteor.user().profile.name;
     return Message.find({ destination: id });
   },
   sentMessageList() {
-    console.log('sentmessage');
     const id = Meteor.user().profile.name;
     return Message.find({ username: id });
   },

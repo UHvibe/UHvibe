@@ -45,16 +45,16 @@ Template.Filter_Page.events({
     instance.messageFlags.set(selectedInterestsKey, _.map(selectedOptions, (option) => option.value));
   },
   'click #message-to-profile'(event) {
-    const newDate = new Date();
     const username = FlowRouter.getParam('username');
     const destination = event.target.text;
-    const date = newDate.toString();
+    let newDate = new Date();
+    newDate = newDate.toString().slice(0, 24);
     const subject = 'In Progress';
     const content = 'In Progress';
     const newMessage = Message.define({
       username: username,
       destination: destination,
-      date: date,
+      date: newDate,
       subject: subject,
       content: content,
     });

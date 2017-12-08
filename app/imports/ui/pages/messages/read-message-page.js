@@ -71,16 +71,16 @@ Template.Read_Message_Page.events({
         break;
       }
     }
-    const newDate = new Date();
+    let newDate = new Date();
+    newDate = newDate.toString().slice(0, 24);
     const username = FlowRouter.getParam('username');
     const destination = tempDestination;
-    const date = newDate.toString();
     const subject = 'In Progress';
     const content = 'In Progress';
     const newMessage = Message.define({
       username: username,
       destination: destination,
-      date: date,
+      date: newDate,
       subject: subject,
       content: content,
     });

@@ -12,7 +12,7 @@
           <th>From</th>
           <th>Date</th>
           <th>Subject</th>
-          <th></th>
+          <th>Read</th>
         </tr>
         </thead>
         <tbody>
@@ -23,7 +23,11 @@
               <td>{{message.username}}</td>
               <td>{{message.date}}</td>
               <td>{{message.subject}}</td>
-              <td><a href="{{pathFor 'Read_Message_Page' username=routeUserName messageID=message._id}}">Read</a></td>
+              <td>
+                <a href="{{pathFor 'Read_Message_Page' username=routeUserName messageID=message._id}}">
+                  <i class="red book icon"></i>
+                </a>
+              </td>
             </tr>
           {{/each}}
         {{else}}
@@ -33,7 +37,11 @@
               <td>{{message.username}}</td>
               <td>{{message.date}}</td>
               <td>{{message.subject}}</td>
-              <td><a href="{{pathFor 'Read_Message_Page' username=routeUserName messageID=message._id}}">Read</a></td>
+              <td>
+                <a href="{{pathFor 'Read_Message_Page' username=routeUserName messageID=message._id}}">
+                  <i class="red book icon"></i>
+                </a>
+              </td>
             </tr>
           {{/each}}
         {{/if}}

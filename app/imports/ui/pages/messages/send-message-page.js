@@ -48,7 +48,8 @@ Template.Send_Message_Page.events({
           break;
         }
       }
-      const newDate = new Date();
+      let newDate = new Date();
+      newDate = newDate.toString().slice(0, 24);
       const username = FlowRouter.getParam('username');
       const destination = receiver;
       const date = newDate.toString();
@@ -56,7 +57,7 @@ Template.Send_Message_Page.events({
         _id: id,
         username: username,
         destination: destination,
-        date: date,
+        date: newDate,
         subject: newSubject,
         content: newContent,
       });
