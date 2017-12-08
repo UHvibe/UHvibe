@@ -1,30 +1,42 @@
 <template name="Message_Page">
   {{#if Template.subscriptionsReady}}
     <div class="ui container">
-      <div class="ui large buttons">
-        <button class="receive ui button" type="submit">Received</button>
-        <button class="sent ui button" type="submit">Sent</button>
-      </div>
+      <select name="receiveOrSent" id="receiveOrSentButtons">
+        <option value="receive">Received</option>
+        <option value="sent">Sent</option>
+      </select>
       <table class="ui striped table">
         <thead>
-          <tr>
-            <th>To</th>
-            <th>From</th>
-            <th>Date</th>
-            <th>Subject</th>
-            <th></th>
-          </tr>
+        <tr>
+          <th>To</th>
+          <th>From</th>
+          <th>Date</th>
+          <th>Subject</th>
+          <th></th>
+        </tr>
         </thead>
         <tbody>
-        {{#each message in messageList}}
-          <tr>
-            <td>{{message.destination}}</td>
-            <td>{{message.username}}</td>
-            <td>{{message.date}}</td>
-            <td>{{message.subject}}</td>
-            <td><a href="{{pathFor 'Read_Message_Page' username=routeUserName messageID=message._id}}">Read</a></td>
-          </tr>
-        {{/each}}
+        {{#if showReceivedMessages}}
+          {{#each message in receivedMessageList}}
+            <tr>
+              <td>{{message.destination}}</td>
+              <td>{{message.username}}</td>
+              <td>{{message.date}}</td>
+              <td>{{message.subject}}</td>
+              <td><a href="{{pathFor 'Read_Message_Page' username=routeUserName messageID=message._id}}">Read</a></td>
+            </tr>
+          {{/each}}
+        {{else}}
+          {{#each message in sentMessageList}}
+            <tr>
+              <td>{{message.destination}}</td>
+              <td>{{message.username}}</td>
+              <td>{{message.date}}</td>
+              <td>{{message.subject}}</td>
+              <td><a href="{{pathFor 'Read_Message_Page' username=routeUserName messageID=message._id}}">Read</a></td>
+            </tr>
+          {{/each}}
+        {{/if}}
         </tbody>
       </table>
     </div>
