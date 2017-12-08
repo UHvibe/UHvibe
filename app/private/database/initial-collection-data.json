@@ -1,5 +1,5 @@
 {
-  "comment": "Initial contents for the BowFolios database. For development purposes only.",
+  "comment": "Initial contents for the UHvibe database. For development purposes only.",
   "collections": [
     {
       "name": "InterestCollection",
@@ -119,20 +119,20 @@
             "Classical",
             "Pop (Popular music)"
           ],
-          "skills": "Piano, guitar",
+          "skills": "Piano, Guitar",
           "picture": "/images/usericon.png"
         },
         {
           "firstName": "Monica",
           "lastName": "Stevenson",
           "username": "mstevenson",
-          "bio": "I like playing guitar and base as a hobby, I learned how to play saxephone in highschool.",
+          "bio": "I like playing guitar and bass as a hobby, I learned how to play saxophone in highschool.",
           "interests": [
             "Electronic",
             "Jazz",
             "Rock"
           ],
-          "skills": "Guitar, Saxephone, Base",
+          "skills": "Guitar, Saxophone, Bass",
           "picture": "/images/usericon.png"
         },
         {
@@ -145,7 +145,7 @@
             "Rock",
             "New Age"
           ],
-          "skills": "Guitar, Singing, Base",
+          "skills": "Guitar, Singing, Bass",
           "picture": "/images/usericon.png"
         }
       ]
