@@ -9,13 +9,19 @@
                 </div>
                 {{#if currentUser}}
                     <div class="item">
-                        <a style="color: white;" class="{{isActiveRoute "Profile_Page"}} item" href="{{pathFor "Profile_Page" username=userLanding}}">PROFILE</a>
+                        <a style="color: white;" class="{{isActiveRoute "Profile_Page"}} item" href="{{pathFor "Profile_Page" username=userLanding}}">
+                          PROFILE
+                        </a>
                     </div>
                     <div class="item">
-                        <a style="color: white;" class="{{isActiveRoute "Filter_Page"}} item" href="{{pathFor "Filter_Page" username=userLanding}}">SEARCH</a>
+                        <a style="color: white;" class="{{isActiveRoute "Filter_Page"}} item" href="{{pathFor "Filter_Page" username=userLanding}}">
+                          SEARCH
+                        </a>
                     </div>
                     <div class="item">
-                        <a style="color: white;" class="{{isActiveRoute "Message_Page"}} item" href="{{pathFor "Message_Page" username=userLanding}}">MESSAGES</a>
+                        <a style="color: white;" class="{{isActiveRoute "Message_Page"}} item" href="{{pathFor "Message_Page" username=userLanding}}">
+                          MESSAGES
+                        </a>
                     </div>
                 {{/if}}
                 <div class="item">

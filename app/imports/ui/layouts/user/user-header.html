@@ -11,8 +11,14 @@
           <div class="item"><a class="{{isActiveRoute " Filter_Page"}} item" href="{{pathFor "Filter_Page"
             username=routeUserName}}">SEARCH</a>
           </div>
-          <div class="item"><a class="{{isActiveRoute " Message_Page"}} item" href="{{pathFor "Message_Page"
-            username=routeUserName}}">MESSAGES</a>
+          <div class="item">
+            <a class="{{isActiveRoute " Message_Page"}} item" href="{{pathFor "Message_Page"
+            username=routeUserName}}">
+              {{#if newMessageCount}}
+                <i class="right red circle icon"></i>
+              {{/if}}
+              MESSAGES
+            </a>
           </div>
           <div class="right aligned item">{{> Cas_Login }}</div>
         </div>
