@@ -49,14 +49,15 @@ Template.Filter_Page.events({
     const destination = event.target.text;
     let newDate = new Date();
     newDate = newDate.toString().slice(0, 24);
-    const subject = 'DRAFT IS IN PROGRESS';
-    const content = 'DRAFT IS IN PROGRESS';
+    const subject = 'DRAFT IN PROGRESS';
+    const content = 'DRAFT IN PROGRESS';
     const newMessage = Message.define({
       username: username,
       destination: destination,
       date: newDate,
       subject: subject,
       content: content,
+      notRead: false,
     });
     FlowRouter.go('/:username/messages/sendMessage/:messageID', {
       username: FlowRouter.getParam('username'),

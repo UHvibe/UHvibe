@@ -13,17 +13,19 @@ class MessageCollection extends BaseCollection {
       subject: { type: String },
       content: { type: String },
       notRead: { type: Boolean },
+      isDraft: { type: Boolean},
     }, { tracker: Tracker }));
   }
 
-  define({ username, destination = '', date = '', subject = '', content = '', notRead = true }) {
+  define({ username, destination = '', date = '', subject = '', content = '', notRead = true, isDraft = true }) {
     const checkPattern = {
-      username: String, destination: String, date: String, subject: String, content: String, notRead: Boolean
+      username: String, destination: String, date: String, subject: String,
+      content: String, notRead: Boolean, isDraft: Boolean,
     };
-    check({ username, destination, date, subject, content, notRead }, checkPattern);
+    check({ username, destination, date, subject, content, notRead, isDraft }, checkPattern);
 
     return this._collection.insert({
-      username, destination, date, subject, content, notRead,
+      username, destination, date, subject, content, notRead, isDraft,
     });
   }
 
@@ -36,7 +38,8 @@ class MessageCollection extends BaseCollection {
     const subject = doc.subject;
     const content = doc.content;
     const notRead = doc.notRead;
-    return { username, destination, date, subject, content, notRead };
+    const isDraft = doc.isDraft;
+    return { username, destination, date, subject, content, notRead, isDraft };
   }
 }
 

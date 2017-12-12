@@ -159,7 +159,8 @@
           "date": "December 1, 2017",
           "subject": "Hey",
           "content": "Yo, Do you want to hang out?",
-          "notRead": false
+          "notRead": false,
+          "isDraft": false
         },
         {
           "username": "TrumpetGeek",
@@ -167,7 +168,8 @@
           "date": "December 2, 2017",
           "subject": "No",
           "content": "Why?",
-          "notRead": true
+          "notRead": true,
+          "isDraft": false
         },
         {
           "username": "okabej3",
@@ -175,7 +177,8 @@
           "date": "December 4, 2017",
           "subject": "Testing#1",
           "content": "Testing#1",
-          "notRead": false
+          "notRead": false,
+          "isDraft": false
         },
         {
           "username": "maiabe",
@@ -183,7 +186,8 @@
           "date": "December 4, 2017",
           "subject": "Testing#2",
           "content": "Testing#2",
-          "notRead": true
+          "notRead": true,
+          "isDraft": false
         },
         {
           "username": "maiabe",
@@ -191,7 +195,8 @@
           "date": "December 4, 2017",
           "subject": "Testing#3",
           "content": "Testing#3",
-          "notRead": false
+          "notRead": false,
+          "isDraft": false
         },
         {
           "username": "darlene4",
@@ -199,7 +204,8 @@
           "date": "December 4, 2017",
           "subject": "Testing#4",
           "content": "Testing#4",
-          "notRead": true
+          "notRead": true,
+          "isDraft": false
         },
         {
           "username": "darlene4",
@@ -207,7 +213,8 @@
           "date": "December 4, 2017",
           "subject": "Testing#5",
           "content": "Testing#5",
-          "notRead": true
+          "notRead": true,
+          "isDraft": false
         },
         {
           "username": "okabej3",
@@ -215,7 +222,8 @@
           "date": "December 4, 2017",
           "subject": "Testing#6",
           "content": "Testing#6",
-          "notRead": true
+          "notRead": true,
+          "isDraft": false
         }
       ]
     }
