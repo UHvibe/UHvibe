@@ -7,7 +7,6 @@
 
         <p>From: {{sending}}</p>
 
-
         <div class="field">
           {{> Text_Form_Control label="Subject" placeholder="Subject" value=message.subject}}
         </div>
@@ -16,11 +15,9 @@
           {{> TextArea_Form_Control label="Content" placeholder="Your Message" value=message.content}}
         </div>
 
-
         <button class="ui red button" id="send" type="submit">Send</button>
         <button class="ui red button" id="cancel">Cancel</button>
       </form>
-
     </div>
   {{/if}}
 </template>

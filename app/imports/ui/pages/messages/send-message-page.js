@@ -52,7 +52,6 @@ Template.Send_Message_Page.events({
       newDate = newDate.toString().slice(0, 24);
       const username = FlowRouter.getParam('username');
       const destination = receiver;
-      const date = newDate.toString();
       Message.define({
         _id: id,
         username: username,

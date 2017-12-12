@@ -12,7 +12,12 @@ Template.Message_Page.onCreated(function () {
 Template.Message_Page.helpers({
   receivedMessageList() {
     const id = Meteor.user().profile.name;
-    return Message.find({ destination: id });
+    return Message.find({
+      $and: [
+        { destination: id },
+        { subject: { $not: 'DRAFT IS IN PROGRESS' } },
+      ],
+    });
   },
   sentMessageList() {
     const id = Meteor.user().profile.name;

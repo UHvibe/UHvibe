@@ -158,56 +158,64 @@
           "destination": "TrumpetGeek",
           "date": "December 1, 2017",
           "subject": "Hey",
-          "content": "Yo, Do you want to hang out?"
+          "content": "Yo, Do you want to hang out?",
+          "notRead": false
         },
         {
           "username": "TrumpetGeek",
           "destination": "MrMusic",
           "date": "December 2, 2017",
           "subject": "No",
-          "content": "Why?"
+          "content": "Why?",
+          "notRead": true
         },
         {
           "username": "okabej3",
           "destination": "maiabe",
           "date": "December 4, 2017",
           "subject": "Testing#1",
-          "content": "Testing#1"
+          "content": "Testing#1",
+          "notRead": false
         },
         {
           "username": "maiabe",
           "destination": "okabej3",
           "date": "December 4, 2017",
           "subject": "Testing#2",
-          "content": "Testing#2"
+          "content": "Testing#2",
+          "notRead": true
         },
         {
           "username": "maiabe",
           "destination": "darlene4",
           "date": "December 4, 2017",
           "subject": "Testing#3",
-          "content": "Testing#3"
+          "content": "Testing#3",
+          "notRead": false
         },
         {
           "username": "darlene4",
           "destination": "maiabe",
           "date": "December 4, 2017",
           "subject": "Testing#4",
-          "content": "Testing#4"
+          "content": "Testing#4",
+          "notRead": true
         },
         {
           "username": "darlene4",
           "destination": "okabej3",
           "date": "December 4, 2017",
           "subject": "Testing#5",
-          "content": "Testing#5"
+          "content": "Testing#5",
+          "notRead": true
         },
         {
           "username": "okabej3",
           "destination": "darlene4",
           "date": "December 4, 2017",
           "subject": "Testing#6",
-          "content": "Testing#6"
+          "content": "Testing#6",
+          "notRead": true
         }
       ]
     }

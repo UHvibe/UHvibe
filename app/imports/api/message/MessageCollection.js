@@ -12,17 +12,18 @@ class MessageCollection extends BaseCollection {
       date: { type: String },
       subject: { type: String },
       content: { type: String },
+      notRead: { type: Boolean },
     }, { tracker: Tracker }));
   }
 
-  define({ username, destination = '', date = '', subject = '', content = '' }) {
+  define({ username, destination = '', date = '', subject = '', content = '', notRead = true }) {
     const checkPattern = {
-      username: String, destination: String, date: String, subject: String, content: String,
+      username: String, destination: String, date: String, subject: String, content: String, notRead: Boolean
     };
-    check({ username, destination, date, subject, content }, checkPattern);
+    check({ username, destination, date, subject, content, notRead }, checkPattern);
 
     return this._collection.insert({
-      username, destination, date, subject, content,
+      username, destination, date, subject, content, notRead,
     });
   }
 
@@ -34,7 +35,8 @@ class MessageCollection extends BaseCollection {
     const date = doc.date;
     const subject = doc.subject;
     const content = doc.content;
-    return { username, destination, date, subject, content };
+    const notRead = doc.notRead;
+    return { username, destination, date, subject, content, notRead };
   }
 }
 
