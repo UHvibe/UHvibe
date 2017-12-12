@@ -4,7 +4,7 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 import { _ } from 'meteor/underscore';
 import { Profiles } from '/imports/api/profile/ProfileCollection';
 import { Interests } from '/imports/api/interest/InterestCollection';
-
+import { Message } from '../../../api/message/MessageCollection.js';
 
 const displaySuccessMessage = 'displaySuccessMessage';
 const displayErrorMessages = 'displayErrorMessages';
@@ -13,6 +13,7 @@ const displayErrorMessages = 'displayErrorMessages';
 Template.Create_Profile_Page.onCreated(function onCreated() {
   this.subscribe(Interests.getPublicationName());
   this.subscribe(Profiles.getPublicationName());
+  this.subscribe(Message.getPublicationName());
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(displaySuccessMessage, false);
   this.messageFlags.set(displayErrorMessages, false);

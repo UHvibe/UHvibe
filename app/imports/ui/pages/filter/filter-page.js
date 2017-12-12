@@ -11,6 +11,7 @@ const selectedInterestsKey = 'selectedInterests';
 Template.Filter_Page.onCreated(function onCreated() {
   this.subscribe(Interests.getPublicationName());
   this.subscribe(Profiles.getPublicationName());
+  this.subscribe(Message.getPublicationName());
   this.messageFlags = new ReactiveDict();
   this.messageFlags.set(selectedInterestsKey, undefined);
 });

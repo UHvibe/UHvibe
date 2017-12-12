@@ -20,6 +20,9 @@
                     </div>
                     <div class="item">
                         <a style="color: white;" class="{{isActiveRoute "Message_Page"}} item" href="{{pathFor "Message_Page" username=userLanding}}">
+                          {{#if newMessageCount}}
+                            <i class="right red circle icon"></i>
+                          {{/if}}
                           MESSAGES
                         </a>
                     </div>
