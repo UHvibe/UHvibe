@@ -49,8 +49,8 @@ Template.Filter_Page.events({
     const destination = event.target.text;
     let newDate = new Date();
     newDate = newDate.toString().slice(0, 24);
-    const subject = 'In Progress';
-    const content = 'In Progress';
+    const subject = 'DRAFT IS IN PROGRESS';
+    const content = 'DRAFT IS IN PROGRESS';
     const newMessage = Message.define({
       username: username,
       destination: destination,

@@ -4,6 +4,11 @@ import { Message } from '../../../api/message/MessageCollection.js';
 
 Template.Read_Message_Page.onCreated(function onCreated() {
   this.subscribe(Message.getPublicationName());
+  const id = FlowRouter.getParam('messageID');
+  Message.update(
+      { _id: id },
+      { $set: { notRead: false } },
+  );
 });
 
 Template.Read_Message_Page.helpers({
@@ -75,8 +80,8 @@ Template.Read_Message_Page.events({
     newDate = newDate.toString().slice(0, 24);
     const username = FlowRouter.getParam('username');
     const destination = tempDestination;
-    const subject = 'In Progress';
-    const content = 'In Progress';
+    const subject = 'DRAFT IS IN PROGRESS';
+    const content = 'DRAFT IS IN PROGRESS';
     const newMessage = Message.define({
       username: username,
       destination: destination,

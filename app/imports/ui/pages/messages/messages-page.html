@@ -5,9 +5,10 @@
         <option value="receive">Received</option>
         <option value="sent">Sent</option>
       </select>
-      <table class="ui striped table">
+      <table class="ui striped padded red table">
         <thead>
         <tr>
+          <th></th>
           <th>To</th>
           <th>From</th>
           <th>Date</th>
@@ -19,6 +20,11 @@
         {{#if showReceivedMessages}}
           {{#each message in receivedMessageList}}
             <tr>
+              <td class="center aligned">
+                {{#if message.notRead}}
+                  <span>New </span><i class="red circle icon"></i>
+                {{/if}}
+              </td>
               <td>{{message.destination}}</td>
               <td>{{message.username}}</td>
               <td>{{message.date}}</td>
@@ -33,6 +39,7 @@
         {{else}}
           {{#each message in sentMessageList}}
             <tr>
+              <td></td>
               <td>{{message.destination}}</td>
               <td>{{message.username}}</td>
               <td>{{message.date}}</td>
