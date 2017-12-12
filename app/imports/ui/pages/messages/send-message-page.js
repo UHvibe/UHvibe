@@ -59,6 +59,8 @@ Template.Send_Message_Page.events({
         date: newDate,
         subject: newSubject,
         content: newContent,
+        notRead: true,
+        isDraft: false,
       });
       FlowRouter.go('/:username/messages', {
         username: FlowRouter.getParam('username'),

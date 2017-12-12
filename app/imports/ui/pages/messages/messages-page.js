@@ -15,7 +15,7 @@ Template.Message_Page.helpers({
     return Message.find({
       $and: [
         { destination: id },
-        { subject: { $not: 'DRAFT IS IN PROGRESS' } },
+        { isDraft: false },
       ],
     });
   },

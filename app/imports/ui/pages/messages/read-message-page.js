@@ -1,4 +1,5 @@
 import { FlowRouter } from 'meteor/kadira:flow-router';
+import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Message } from '../../../api/message/MessageCollection.js';
 
@@ -62,6 +63,28 @@ Template.Read_Message_Page.helpers({
     }
     return '';
   },
+  userSentMessage() {
+    const messages = Message.findAll();
+    const id = FlowRouter.getParam('messageID');
+    for (let i = 0; i < messages.length; i++) {
+      if (id === messages[i]._id) {
+        if (messages[i].username === Meteor.user().profile.name) {
+          return false;
+        }
+      }
+    }
+    return true;
+  },
+  messageIsDraft() {
+    const messages = Message.findAll();
+    const id = FlowRouter.getParam('messageID');
+    for (let i = 0; i < messages.length; i++) {
+      if (id === messages[i]._id) {
+        return messages[i].isDraft;
+      }
+    }
+    return ' ';
+  },
 });
 
 Template.Read_Message_Page.events({
@@ -80,18 +103,33 @@ Template.Read_Message_Page.events({
     newDate = newDate.toString().slice(0, 24);
     const username = FlowRouter.getParam('username');
     const destination = tempDestination;
-    const subject = 'DRAFT IS IN PROGRESS';
-    const content = 'DRAFT IS IN PROGRESS';
+    const subject = 'DRAFT IN PROGRESS';
+    const content = 'DRAFT IN PROGRESS';
     const newMessage = Message.define({
       username: username,
       destination: destination,
       date: newDate,
       subject: subject,
       content: content,
+      notRead: false,
     });
     FlowRouter.go('/:username/messages/sendMessage/:messageID', {
       username: FlowRouter.getParam('username'),
       messageID: newMessage,
+    });
+  },
+  'click #edit'(event) {
+    event.preventDefault();
+    const id = FlowRouter.getParam('messageID');
+    let newDate = new Date();
+    newDate = newDate.toString().slice(0, 24);
+    Message.update(
+        { _id: id },
+        { $set: { date: newDate } },
+    );
+    FlowRouter.go('/:username/messages/sendMessage/:messageID', {
+      username: FlowRouter.getParam('username'),
+      messageID: id,
     });
   },
   'click #delete'(event) {

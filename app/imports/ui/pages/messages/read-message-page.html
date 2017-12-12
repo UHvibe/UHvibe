@@ -14,9 +14,25 @@
           <p>{{messageContent}}</p>
         </div>
 
-        <button style="margin-top: 50px" id="back" class="ui red button" type="submit">Back</button>
-        <button style="margin-top: 50px" id="reply" class="ui red button" type="submit">Reply</button>
-        <button style="margin-top: 50px" id="delete" class="ui red button" type="submit">Delete</button>
+        <button style="margin-top: 50px" id="back" class="ui red button" type="submit">
+          <i class="arrow left icon"></i>Back
+        </button>
+
+        {{#if userSentMessage}}
+          <button style="margin-top: 50px" id="reply" class="ui red button" type="submit">
+            <i class="reply icon"></i>Reply
+          </button>
+        {{/if}}
+
+        {{#if messageIsDraft}}
+          <button style="margin-top: 50px" id="edit" class="ui red button" type="submit">
+            <i class="edit icon"></i>Edit Message
+          </button>
+        {{/if}}
+
+        <button style="margin-top: 50px" id="delete" class="ui red button" type="submit">
+          <i class="trash icon"></i>Delete
+        </button>
 
       </div>
     {{/if}}
