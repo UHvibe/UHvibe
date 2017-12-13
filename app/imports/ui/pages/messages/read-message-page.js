@@ -6,10 +6,18 @@ import { Message } from '../../../api/message/MessageCollection.js';
 Template.Read_Message_Page.onCreated(function onCreated() {
   this.subscribe(Message.getPublicationName());
   const id = FlowRouter.getParam('messageID');
-  Message.update(
-      { _id: id },
-      { $set: { notRead: false } },
-  );
+  const username = Meteor.user().profile.name;
+  const messages = Message.findAll();
+  for (let i = 0; i < messages.length; i++) {
+    if (id === messages[i]._id) {
+      if (username === messages[i].destination) {
+        Message.update(
+            { _id: id },
+            { $set: { notRead: false } },
+        );
+      }
+    }
+  }
 });
 
 Template.Read_Message_Page.helpers({
