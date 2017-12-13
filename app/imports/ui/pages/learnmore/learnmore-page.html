@@ -97,18 +97,16 @@
           them.
         </div>
       </div>
-
-      {{#if currentUser}}
-        <!--Don't Show the Login Button-->
-      {{else}}
-        <div class="learnmore-section-5">
-          <div class="ui centered container">
-            <h1>Are you interested?</h1><br>
-            <div class="ui red button">{{> Cas_Login}}</div>
-          </div>
-        </div>
-      {{/if}}
-
     </div>
   </div>
+  {{#if currentUser}}
+    <!--Don't Show the Login Button-->
+  {{else}}
+    <div class="learnmore-section-5">
+      <div class="ui centered container">
+        <h1>Are you interested?</h1><br>
+        <div class="ui red button">{{> Cas_Login}}</div>
+      </div>
+    </div>
+  {{/if}}
 </template>
