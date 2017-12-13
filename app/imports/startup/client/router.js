@@ -22,27 +22,6 @@ FlowRouter.route('/learnmore', {
   },
 });
 
-// /*                        DIRECTORY ROUTE                       */
-
-// function addDirectoryBodyClass() {
-//   $('body').addClass('directory-page-body');
-// }
-//
-// function removeDirectoryBodyClass() {
-//   $('body').removeClass('directory-page-body');
-// }
-//
-// export const directoryPageRouteName = 'Directory_Page';
-// FlowRouter.route('/directory', {
-//   name: directoryPageRouteName,
-//   action() {
-//     BlazeLayout.render('Directory_Layout', { main: directoryPageRouteName });
-//   },
-//   triggersEnter: [addDirectoryBodyClass],
-//   triggersExit: [removeDirectoryBodyClass],
-// });
-
-
 /*                        USER ROUTES                      */
 
 
